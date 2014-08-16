@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>img/add.ico</file>
+        <file>img/clear.ico</file>
+        <file>img/clear2.ico</file>
+        <file>img/delete.ico</file>
+        <file>img/load.ico</file>
+        <file>img/save.ico</file>
+        <file>img/tkrtapico.ico</file>
+        <file>img/tkrtapico.png</file>
+    </qresource>
+    <qresource prefix="/Logos">
+        <file>img/logo.png</file>
+        <file>img/logo1.png</file>
+        <file>img/logo2.png</file>
+    </qresource>
+</RCC>
