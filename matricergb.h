@@ -37,6 +37,10 @@ private :
     QString createColorString(int line_no);
     unsigned char calculCRC(const char* message, int length);
     /**
+     * @brief The number of LED matrices on the display
+     */
+    int _number_of_led_matrices;
+    /**
      * @brief Pointer to a QSerialPort object
      */
     QSerialPort *_serial;

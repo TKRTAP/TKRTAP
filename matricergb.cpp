@@ -45,13 +45,18 @@ bool MatriceRgb::toggleSerialPort()
         }
         _serial->setBaudRate(_port_baudrate);
         _serial->setDataBits(_serial->Data8);
+        QString str_no_led_req;
+        str_no_led_req.append(char(9));
+        _serial->write(str_no_led_req.toLatin1().constData(),1);
         char donnes_recue = 0;
-        if(!_serial->waitForReadyRead(INITDELAYSERIAL))
-        {
-            //            QMessageBox::critical(NULL,tr("Error"),tr("Timeout"));
-            //            return false;
+
+        //Retry getting the number of connected LED matrices on the LED display if the result is 0
+        while(!donnes_recue){
+            _serial->write(str_no_led_req.toLatin1().constData(),1);
+            if(!_serial->waitForReadyRead(INITDELAYSERIAL)){}
+            _serial->read(&donnes_recue,1);
         }
-        _serial->read(&donnes_recue,1);
+        _number_of_led_matrices = donnes_recue;
         return true;
     }
     _serial->close();
@@ -79,6 +84,8 @@ void  MatriceRgb::sendLine(int line_no)
     if (_serial->isOpen()){
 
         QString parsed_text = unicodetoCP437(_string_lines[line_no]);
+        parsed_text = parsed_text.leftJustified(_number_of_led_matrices*4,char(32),false);
+        _string_lines[line_no] = parsed_text;
         QTextStream stream_text(&parsed_text);
 
         QString str_couleur,colors_str;
@@ -206,6 +213,7 @@ QString MatriceRgb::unicodetoCP437(QString unicode_str){
     parsed_message.replace(0x00BB,0xAF); //»
     parsed_message.replace(0x00B0,0xF8); //°
     parsed_message.replace(0x20AC,0x1C); //€
+    parsed_message.replace(0x2013,0x2D); //–
     return parsed_message;
 }
 
