@@ -443,7 +443,7 @@ void TKRTAP::SaveSettings()
     settings.setValue("position",this->geometry());
     settings.setValue("StockList",model->stringList());
     // write data for ticker list
-    QFile fOut("temp_save_ticker_list.txt");
+    QFile fOut("autosave_ticker_list.txt");
     if (fOut.open(QFile::WriteOnly | QFile::Text)) {
         QTextStream s(&fOut);
         for (int i = 0; i < model->stringList().size(); ++i)
@@ -455,7 +455,7 @@ void TKRTAP::SaveSettings()
     fOut.close();
 
     // write data for RSS links list
-    QFile fOut2("temp_save_rss_list.txt");
+    QFile fOut2("autosave_rss_list.txt");
     if (fOut2.open(QFile::WriteOnly | QFile::Text)) {
         QTextStream s2(&fOut2);
         for (int i = 0; i < RSSlinklistmodel->stringList().size(); ++i)
