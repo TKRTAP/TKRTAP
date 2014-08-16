@@ -27,8 +27,9 @@ signals:
      * @brief Signal used when the RSS are finished reading
      * @param title_rss List of RSS titles
      * @param link_rss List of the RSS links
+     * @param date_rss List of the RSS published times
      */
-    void rssFinished(QStringList title_rss, QStringList link_rss);
+    void rssFinished(QStringList title_rss, QStringList link_rss, QStringList date_rss);
 
 
 private slots:

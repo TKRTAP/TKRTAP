@@ -112,16 +112,20 @@ void RssClient::moreRSS(){
         if(!_no_data){
             return;
         }
-        QStringList str_rss,link_rss;
+        QStringList str_rss,link_rss,date_rss;
         _model_data->sort(1,Qt::DescendingOrder);
         qDebug() << _no_data << "RSS Loaded";
         _no_data--;
         for(int i=0;i<_no_data;i++){
+            QDateTime date_time = QDateTime::fromTime_t(_model_data->item(i,1)->text().toDouble());
             str_rss << _model_data->item(i,0)->text();
             link_rss << _model_data->item(i,2)->text();
+            date_rss << date_time.toString("HH:mm");
+//            qDebug() << date_time.toString("HH:mm");
+//            qDebug() << _model_data->item(i,1)->text();
         }
         _no_data = 0;
-        emit rssFinished(str_rss,link_rss);
+        emit rssFinished(str_rss,link_rss,date_rss);
         return;
     }
     _xml.clear();

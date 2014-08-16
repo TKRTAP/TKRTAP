@@ -101,7 +101,7 @@ private slots:
 
     //RSS
     void startRSS();
-    void updateTable(QStringList str_list, QStringList link_rss);
+    void updateTable(QStringList str_list, QStringList link_rss, QStringList time_rss);
     void openRSSLink(QListWidgetItem* item);
 
 
@@ -124,6 +124,7 @@ private:
 
     Ui::TKRTAP *ui;
     QStringList _rss_title,_rss_link;
+    QStringList _rss_time;                      /**< @brief String list containing the RSS articles published times*/
     RssClient *_rss_client;
     QStringListModel *model;
     MarketMapView *mDialog;

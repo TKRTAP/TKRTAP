@@ -122,7 +122,7 @@ TKRTAP::TKRTAP(QWidget *parent) :
 
     _rss_client = new RssClient;
     connect(ui->button_loadRSS,SIGNAL(clicked()),this,SLOT(startRSS()));
-    connect(_rss_client,SIGNAL(rssFinished(QStringList,QStringList)),this,SLOT(updateTable(QStringList,QStringList)));
+    connect(_rss_client,SIGNAL(rssFinished(QStringList,QStringList,QStringList)),this,SLOT(updateTable(QStringList,QStringList,QStringList)));
 
     connect(ui->RSSBrowser,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(openRSSLink(QListWidgetItem*)));
 
@@ -892,21 +892,25 @@ void TKRTAP::startRSS(){
  * creates a string to be displayed on the physical LED matrix.
  * @param str_list List of all the sorted RSS results by date
  * @param link_rss List of all the links sorted by date
+ * @param time_rss List of the rss published times
  */
-void TKRTAP::updateTable(QStringList str_list, QStringList link_rss){
+void TKRTAP::updateTable(QStringList str_list, QStringList link_rss, QStringList time_rss){
     QString result;
     int rss_output_number;
     rss_output_number = ui->RSS_results_spinBox->value();
     ui->RSSBrowser->clear();
     _rss_link.clear();
     _rss_title.clear();
+    _rss_time.clear();
     int i = 0;
     while(true){
         if(!_rss_title.contains(str_list.at(i))){
             result += str_list.at(i)+" / ";
-            ui->RSSBrowser->addItem(str_list.at(i));
+            ui->RSSBrowser->addItem(time_rss.at(i)+char(32)+str_list.at(i));
             _rss_title.append(str_list.at(i));
-            _rss_link.append(link_rss.at(i));}
+            _rss_link.append(link_rss.at(i));
+            _rss_time.append(time_rss.at(i));
+        }
         if(_rss_title.count() >= rss_output_number){
             break;
         }
@@ -921,7 +925,7 @@ void TKRTAP::updateTable(QStringList str_list, QStringList link_rss){
  * @param item Selected item from the displayed RSS browser
  */
 void TKRTAP::openRSSLink(QListWidgetItem* item){
-    QDesktopServices::openUrl(QUrl( _rss_link.at(_rss_title.indexOf(item->text())), QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl( _rss_link.at(_rss_title.indexOf(item->text().mid(6))), QUrl::TolerantMode));
 }
 
 void TKRTAP::openStockChart(QString ticker){
