@@ -521,7 +521,7 @@ void TKRTAP::LoadSettings()
     //Load stock list model
     // read data for ticker list
     QStringList ticker_list;
-    QFile fIn("temp_save_ticker_list.txt");
+    QFile fIn("autosave_ticker_list.txt");
     if (fIn.open(QFile::ReadOnly | QFile::Text)) {
         QTextStream sIn(&fIn);
         while (!sIn.atEnd())
@@ -534,7 +534,7 @@ void TKRTAP::LoadSettings()
 
     // read data for RSS links list
     QStringList rss_list;
-    QFile fIn2("temp_save_rss_list.txt");
+    QFile fIn2("autosave_rss_list.txt");
     if (fIn2.open(QFile::ReadOnly | QFile::Text)) {
         QTextStream sIn2(&fIn2);
         while (!sIn2.atEnd())
