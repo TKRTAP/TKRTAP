@@ -331,18 +331,23 @@ void TKRTAP::on_SaveButton_clicked()
 {
     //Save
     QString filename = QFileDialog::getSaveFileName();
-    filename += ".txt";
-    QFile f(filename);
-    if (f.open(QFile::WriteOnly | QFile::Text)) {
-        QTextStream s2(&f);
-        for (int i = 0; i < model->stringList().size(); ++i)
-            s2 << model->stringList().at(i) << '\n';
-    } else {
-        std::cerr << "error opening output file\n";
-        //return EXIT_FAILURE;
+    if (filename.isEmpty()){
+        //Do nothing
     }
-    // store data in f
-    f.close();
+    else{
+        filename += ".txt";
+        QFile f(filename);
+        if (f.open(QFile::WriteOnly | QFile::Text)) {
+            QTextStream s2(&f);
+            for (int i = 0; i < model->stringList().size(); ++i)
+                s2 << model->stringList().at(i) << '\n';
+        } else {
+            std::cerr << "error opening output file\n";
+            //return EXIT_FAILURE;
+        }
+        // store data in f
+        f.close();
+    }
 }
 
 /**
@@ -365,7 +370,12 @@ void TKRTAP::on_LoadButton_clicked()
         std::cerr << "error opening output file\n";
         //return EXIT_FAILURE;
     }
-    model->setStringList(ticker_list);
+    if (ticker_list.isEmpty()){
+        //Do nothing
+    }
+    else{
+        model->setStringList(ticker_list);
+    }
     SetupRequest();
 }
 
@@ -377,18 +387,23 @@ void TKRTAP::on_Save_Button_RSS_clicked()
 {
     //Save
     QString filename = QFileDialog::getSaveFileName();
-    filename += ".txt";
-    QFile f(filename);
-    if (f.open(QFile::WriteOnly | QFile::Text)) {
-        QTextStream s2(&f);
-        for (int i = 0; i < RSSlinklistmodel->stringList().size(); ++i)
-            s2 << RSSlinklistmodel->stringList().at(i) << '\n';
-    } else {
-        std::cerr << "error opening output file\n";
-        //return EXIT_FAILURE;
+    if (filename.isEmpty()){
+        //Do nothing
     }
-    // store data in f
-    f.close();
+    else{
+        filename += ".txt";
+        QFile f(filename);
+        if (f.open(QFile::WriteOnly | QFile::Text)) {
+            QTextStream s2(&f);
+            for (int i = 0; i < RSSlinklistmodel->stringList().size(); ++i)
+                s2 << RSSlinklistmodel->stringList().at(i) << '\n';
+        } else {
+            std::cerr << "error opening output file\n";
+            //return EXIT_FAILURE;
+        }
+        // store data in f
+        f.close();
+    }
 }
 
 /**
@@ -401,16 +416,21 @@ void TKRTAP::on_Load_Button_RSS_clicked()
                                                          "",
                                                          tr("Files (*.*)"));
     QFile fIn(load_filename);
-    QStringList ticker_list;
+    QStringList RSS_list;
     if (fIn.open(QFile::ReadOnly | QFile::Text)) {
         QTextStream sIn(&fIn);
         while (!sIn.atEnd())
-            ticker_list += sIn.readLine();
+            RSS_list += sIn.readLine();
     } else {
         std::cerr << "error opening output file\n";
         //return EXIT_FAILURE;
     }
-    RSSlinklistmodel->setStringList(ticker_list);
+    if (RSS_list.isEmpty()){
+        //Do nothing
+    }
+    else{
+        RSSlinklistmodel->setStringList(RSS_list);
+    }
 }
 
 /**
