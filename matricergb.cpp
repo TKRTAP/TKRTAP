@@ -13,6 +13,7 @@
 #define INITDELAYSERIAL 3000 /**< Delay (in ms) before sending information when opening a serial connection */
 #define BAUDRATE 57600       /**< BaudRate of the serial port */
 #define NBCHARSCOMM 116      /**< Number of characters to transmit at once over the serial port */
+#define NBRETRY 2            /**< Number of retries on bad CRC calculation */
 
 /**
  * @fn MatriceRgb::MatriceRgb
@@ -83,6 +84,7 @@ void  MatriceRgb::sendLine(int line_no)
 {
     if (_serial->isOpen()){
 
+        int retry_counter[2];
         QString parsed_text = unicodetoCP437(_string_lines[line_no]);
         parsed_text = parsed_text.leftJustified(_number_of_led_matrices*4,char(32),false);
         _string_lines[line_no] = parsed_text;
@@ -121,11 +123,13 @@ void  MatriceRgb::sendLine(int line_no)
                 qDebug() << "Message Ligne # " << line_no+1;
                 qDebug() << "Micro ->" << (unsigned char)donnes_recue;
                 qDebug() << "PC    ->" << CRC_calc;
-                if((unsigned char)donnes_recue == CRC_calc)
+                if((unsigned char)donnes_recue == CRC_calc || retry_counter[0] >= NBRETRY)
                 {
+                    retry_counter[0]=0;
                     break;
                 }
                 qDebug() << "Mauvaise transmission Ligne #" << line_no+1;
+                retry_counter[0]++;
                 retry=true;
             }
             retry = false;
@@ -152,11 +156,13 @@ void  MatriceRgb::sendLine(int line_no)
                 qDebug() << "Couleur Ligne # " << line_no+1;
                 qDebug() << "Micro ->" << (unsigned char)donnes_recue;
                 qDebug() << "PC    ->" << CRC_calc;
-                if((unsigned char)donnes_recue == CRC_calc)
+                if((unsigned char)donnes_recue == CRC_calc || retry_counter[1] >= NBRETRY)
                 {
+                    retry_counter[1] = 0;
                     break;
                 }
                 qDebug() << "Mauvaise transmission Ligne #" << line_no+1;
+                retry_counter[1]++;
                 retry=true;
             }
             code=char(2);
@@ -252,7 +258,10 @@ unsigned char MatriceRgb::calculCRC(const char* message,int length){
     return crc;
 }
 
-
+/**
+ * @brief Sends the scroll speed (in ms) to the display. Default is 15ms
+ * @param speed The speed in ms
+ */
 void MatriceRgb::sendSpeed(unsigned char speed){
     _scroll_speed = speed;
     if (_serial->isOpen()){
