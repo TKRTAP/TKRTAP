@@ -1,3 +1,10 @@
+/**
+  * \file quickstockchart.h
+  * \brief Implementation of the stock chart dialog window
+  * \author Shariff Côté
+  * \date 07/16/2014
+*/
+
 #ifndef QUICKSTOCKCHART_H
 #define QUICKSTOCKCHART_H
 

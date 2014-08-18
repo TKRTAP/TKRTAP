@@ -1,3 +1,10 @@
+/**
+  * \file rssclient.h
+  * \brief Implementation of the RSS client class
+  * \author Quentin Barry-Marcheterre
+  * \date 07/16/2014
+*/
+
 #ifndef RSSCLIENT_H
 #define RSSCLIENT_H
 

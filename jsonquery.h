@@ -1,3 +1,10 @@
+/**
+  * \file jsonquery.h
+  * \brief Implementation of the jsonquery class
+  * \author Quentin Barry-Marcheterre and Shariff Côté
+  * \date 07/16/2014
+*/
+
 #ifndef JSONQUERY_H
 #define JSONQUERY_H
 

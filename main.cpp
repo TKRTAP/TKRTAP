@@ -1,3 +1,10 @@
+/**
+  * \file main.cpp
+  * \brief Implementation of the main GUI class
+  * \author Shariff Côté and Quentin Barry-Marcheterre
+  * \date 07/16/2014
+*/
+
 #include "tkrtap.h"
 #include <QApplication>
 

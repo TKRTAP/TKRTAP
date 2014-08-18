@@ -998,7 +998,6 @@ void TKRTAP::openStockChart(QString ticker){
  * @brief Checks if the user input is valid then delete the input if it is not valid
  */
 void TKRTAP::validate_tickers(){
-    QString validated_string("none");
     QString tested_character;
     QStringList tested_characters;
     tested_characters << "#"
@@ -1075,10 +1074,13 @@ void TKRTAP::validate_tickers(){
     }
 }
 
+/**
+ * @fn TKRTAP::on_listView_doubleClicked(const QModelIndex &index)
+ * @brief When a ticker in the stock list is double clicked the quick stock chart dialog opens
+ */
 void TKRTAP::on_listView_doubleClicked(const QModelIndex &index)
 {
     QString ticker;
     ticker = index.data().toString();
-    qDebug () <<ticker;
     openStockChart(ticker);
 }

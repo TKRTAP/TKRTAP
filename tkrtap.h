@@ -1,3 +1,10 @@
+/**
+  * \file tkrtap.h
+  * \brief Implementation of the main GUI class
+  * \author Shariff Côté and Quentin Barry-Marcheterre
+  * \date 07/16/2014
+*/
+
 #ifndef TKRTAP_H
 #define TKRTAP_H
 

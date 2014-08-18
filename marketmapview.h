@@ -1,3 +1,10 @@
+/**
+  * \file marketmapview.h
+  * \brief Implementation of the Market Map dialog window
+  * \author Shariff Côté
+  * \date 07/16/2014
+*/
+
 #ifndef MARKETMAPVIEW_H
 #define MARKETMAPVIEW_H
 
