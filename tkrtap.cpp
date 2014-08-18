@@ -78,7 +78,7 @@ TKRTAP::TKRTAP(QWidget *parent) :
     RSS_Timer = new QTimer(this);
     RSS_Timer->start(300000); //5 minutes
     connect(Ticker_Timer, SIGNAL(timeout()), this, SLOT(SetupRequest()));
-    //connect(ui->bout_connexion,SIGNAL(clicked()),this,SLOT(timerStart()));
+    connect(ui->comboBoxRefresh,SIGNAL(currentIndexChanged(int)),this,SLOT(timerStart()));
     connect(RSS_Timer, SIGNAL(timeout()), this, SLOT(startRSS()));
 
     //Stock list----------------------------------------------------------------------------------------------------
@@ -128,7 +128,6 @@ TKRTAP::TKRTAP(QWidget *parent) :
 
 
     startRSS();
-    timerStart();
 }
 
 TKRTAP::~TKRTAP()
@@ -488,6 +487,7 @@ void TKRTAP::SaveSettings()
 
     //Saving Stock Tab Combo Boxes index
     settings.setValue("ComboBoxDataFeed", ui->DataFeedcomboBox->currentIndex());
+    settings.setValue("ComboBoxRefresh", ui->comboBoxRefresh->currentIndex());
 
     //Saving Text on Buttons
     settings.setValue("ChartButtonTextEdit", ui->ChartsButtonTextEdit->text());
@@ -567,6 +567,8 @@ void TKRTAP::LoadSettings()
 
     int indexDataFeedComboBox = settings.value("ComboBoxDataFeed", 1).toInt();
     ui->DataFeedcomboBox->setCurrentIndex(indexDataFeedComboBox);
+    int indexRefreshComboBox = settings.value("ComboBoxRefresh", 1).toInt();
+    ui->comboBoxRefresh->setCurrentIndex(indexRefreshComboBox);
 
     //Load RSS link list model
     //QStringList SavedRSSList = settings.value("RSSLinkList").toStringList();
@@ -825,6 +827,7 @@ void TKRTAP::SetupRequest()
     _JSON_query->setServiceName(ui->DataFeedcomboBox->currentText());
     _JSON_query->setTickerNames(model->stringList());
     _JSON_query->sendRequest();
+    qDebug() <<"Updating Stock quotes";
 }
 
 /**
@@ -870,39 +873,55 @@ void TKRTAP::timerStart()
     }
     else{
         int NumberOfStocks = model->stringList().count();
-        int Time = NumberOfStocks*20000;
+        int Time = NumberOfStocks*12000;
+        if (ui->comboBoxScrollSpeed->currentText() == "Fast"){
+            Time = NumberOfStocks*3000;
+        }
+        else if (ui->comboBoxScrollSpeed->currentText() == "Medium"){
+            Time = NumberOfStocks*6000;
+        }
         QString CurrentDataFeed(ui->DataFeedcomboBox->currentText());
         if (CurrentDataFeed == "Yahoo")
         {
             if (ui->comboBoxRefresh->currentText() == "10s"){
                 Ticker_Timer->start(10000);//10 000 = 10 seconds
+                qDebug() <<"Timer as started - 10 seconds";
             }
             else if (ui->comboBoxRefresh->currentText() == "30s"){
                 Ticker_Timer->start(30000);//30 000 = 30 seconds
+                qDebug() <<"Timer as started - 30 seconds";
             }
             else if (ui->comboBoxRefresh->currentText() == "1m"){
                 Ticker_Timer->start(60000);//60 000 = 60 seconds
+                qDebug() <<"Timer as started - 60 seconds";
             }
             else if (ui->comboBoxRefresh->currentText() == "2m"){
                 Ticker_Timer->start(120000);//120 000 = 120 seconds
+                qDebug() <<"Timer as started - 120 seconds";
             }
             else if (ui->comboBoxRefresh->currentText() == "5m"){
                 Ticker_Timer->start(300000);//300 000 = 5 minutes
+                qDebug() <<"Timer as started -  minutes5";
             }
             else if (ui->comboBoxRefresh->currentText() == "15m"){
                 Ticker_Timer->start(900000);//900000 = 15 minutes
+                qDebug() <<"Timer as started - 15 minutes";
             }
             else if (ui->comboBoxRefresh->currentText() == "30m"){
                 Ticker_Timer->start(1800000);//1 800 000 = 30 minutes
+                qDebug() <<"Timer as started - 30 minutes";
             }
             else if (ui->comboBoxRefresh->currentText() == "1h"){
                 Ticker_Timer->start(3600000);//3 600 000 = 1 hour
+                qDebug() <<"Timer as started - 1 hour";
             }
             else if (ui->comboBoxRefresh->currentText() == "2h"){
-                Ticker_Timer->start(7200000);//7 200 000 = 2 hour
+                Ticker_Timer->start(7200000);//7 200 000 = 2 hours
+                qDebug() <<"Timer as started - 2 hours";
             }
             else{
                 Ticker_Timer->start(Time);//Automatic for the LED Panel
+                qDebug() <<"Timer as started - Auto " <<Time;
             }
         }
         else
