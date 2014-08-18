@@ -458,7 +458,7 @@ void TKRTAP::on_AllButton_clicked()
 void TKRTAP::SaveSettings()
 {
     //Save
-    QSettings settings ("QS Tech", "TKRTAP");
+    QSettings settings ("TKRTAP", "TKRTAP");
     settings.beginGroup("MainWindow");
     settings.setValue("position",this->geometry());
     settings.setValue("StockList",model->stringList());
@@ -535,7 +535,7 @@ void TKRTAP::SaveSettings()
 void TKRTAP::LoadSettings()
 {
     //Load;
-    QSettings settings ("QS Tech", "TKRTAP");
+    QSettings settings ("TKRTAP", "TKRTAP");
     settings.beginGroup("MainWindow");
 
     //Load stock list model
