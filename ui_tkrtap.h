@@ -77,6 +77,8 @@ public:
     QPushButton *LoadButton;
     QGroupBox *DataFeedgroupBox;
     QComboBox *DataFeedcomboBox;
+    QGroupBox *groupBox;
+    QComboBox *comboBoxRefresh;
     QSpacerItem *verticalSpacer_2;
     QWidget *tab_RSS;
     QGridLayout *gridLayout_4;
@@ -152,8 +154,8 @@ public:
     {
         if (TKRTAP->objectName().isEmpty())
             TKRTAP->setObjectName(QStringLiteral("TKRTAP"));
-        TKRTAP->resize(640, 450);
-        TKRTAP->setMinimumSize(QSize(640, 0));
+        TKRTAP->resize(677, 450);
+        TKRTAP->setMinimumSize(QSize(677, 0));
         QIcon icon;
         icon.addFile(QStringLiteral(":/icons/img/tkrtapico.png"), QSize(), QIcon::Normal, QIcon::Off);
         TKRTAP->setWindowIcon(icon);
@@ -288,14 +290,14 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         listView = new QListView(tab_Stocks);
         listView->setObjectName(QStringLiteral("listView"));
-        listView->setMinimumSize(QSize(85, 0));
+        listView->setMinimumSize(QSize(95, 0));
         listView->setMaximumSize(QSize(120, 16777215));
 
         horizontalLayout_3->addWidget(listView);
 
         PricesListWidget = new QListWidget(tab_Stocks);
         PricesListWidget->setObjectName(QStringLiteral("PricesListWidget"));
-        PricesListWidget->setMinimumSize(QSize(220, 0));
+        PricesListWidget->setMinimumSize(QSize(285, 0));
         PricesListWidget->setFrameShape(QFrame::WinPanel);
         PricesListWidget->setAlternatingRowColors(false);
         PricesListWidget->setSelectionMode(QAbstractItemView::NoSelection);
@@ -363,6 +365,15 @@ public:
         DataFeedcomboBox->setGeometry(QRect(10, 20, 81, 21));
 
         verticalLayout_4->addWidget(DataFeedgroupBox);
+
+        groupBox = new QGroupBox(tab_Stocks);
+        groupBox->setObjectName(QStringLiteral("groupBox"));
+        groupBox->setMinimumSize(QSize(0, 45));
+        comboBoxRefresh = new QComboBox(groupBox);
+        comboBoxRefresh->setObjectName(QStringLiteral("comboBoxRefresh"));
+        comboBoxRefresh->setGeometry(QRect(10, 20, 81, 21));
+
+        verticalLayout_4->addWidget(groupBox);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -851,7 +862,7 @@ public:
         TKRTAP->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TKRTAP);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 640, 21));
+        menuBar->setGeometry(QRect(0, 0, 677, 21));
         TKRTAP->setMenuBar(menuBar);
         QWidget::setTabOrder(AllButton, Charts);
         QWidget::setTabOrder(Charts, Screener);
@@ -927,6 +938,20 @@ public:
          << QApplication::translate("TKRTAP", "Quandl", 0)
          << QApplication::translate("TKRTAP", "Yahoo", 0)
          << QApplication::translate("TKRTAP", "Off", 0)
+        );
+        groupBox->setTitle(QApplication::translate("TKRTAP", "Refresh Rate", 0));
+        comboBoxRefresh->clear();
+        comboBoxRefresh->insertItems(0, QStringList()
+         << QApplication::translate("TKRTAP", "10s", 0)
+         << QApplication::translate("TKRTAP", "30s", 0)
+         << QApplication::translate("TKRTAP", "1m", 0)
+         << QApplication::translate("TKRTAP", "2m", 0)
+         << QApplication::translate("TKRTAP", "5m", 0)
+         << QApplication::translate("TKRTAP", "15m", 0)
+         << QApplication::translate("TKRTAP", "30m", 0)
+         << QApplication::translate("TKRTAP", "1h", 0)
+         << QApplication::translate("TKRTAP", "2h", 0)
+         << QApplication::translate("TKRTAP", "Auto", 0)
         );
         Tabs->setTabText(Tabs->indexOf(tab_Stocks), QApplication::translate("TKRTAP", "Stocks", 0));
         AddStockRSSButton->setText(QApplication::translate("TKRTAP", "Add RSS Feeds of your stocks", 0));

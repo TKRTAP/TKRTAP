@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
+    <width>677</width>
     <height>450</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>640</width>
+    <width>677</width>
     <height>0</height>
    </size>
   </property>
@@ -303,7 +303,7 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
                <widget class="QListView" name="listView">
                 <property name="minimumSize">
                  <size>
-                  <width>85</width>
+                  <width>95</width>
                   <height>0</height>
                  </size>
                 </property>
@@ -319,7 +319,7 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
                <widget class="QListWidget" name="PricesListWidget">
                 <property name="minimumSize">
                  <size>
-                  <width>220</width>
+                  <width>285</width>
                   <height>0</height>
                  </size>
                 </property>
@@ -470,6 +470,79 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
                    <item>
                     <property name="text">
                      <string>Off</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>45</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>Refresh Rate</string>
+                  </property>
+                  <widget class="QComboBox" name="comboBoxRefresh">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>20</y>
+                     <width>81</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>10s</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>30s</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1m</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>2m</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>5m</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>15m</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>30m</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1h</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>2h</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Auto</string>
                     </property>
                    </item>
                   </widget>
@@ -1346,7 +1419,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
+     <width>677</width>
      <height>21</height>
     </rect>
    </property>

@@ -78,7 +78,7 @@ TKRTAP::TKRTAP(QWidget *parent) :
     RSS_Timer = new QTimer(this);
     RSS_Timer->start(300000); //5 minutes
     connect(Ticker_Timer, SIGNAL(timeout()), this, SLOT(SetupRequest()));
-    connect(ui->bout_connexion,SIGNAL(clicked()),this,SLOT(timerStart()));
+    //connect(ui->bout_connexion,SIGNAL(clicked()),this,SLOT(timerStart()));
     connect(RSS_Timer, SIGNAL(timeout()), this, SLOT(startRSS()));
 
     //Stock list----------------------------------------------------------------------------------------------------
@@ -128,7 +128,7 @@ TKRTAP::TKRTAP(QWidget *parent) :
 
 
     startRSS();
-    SetupRequest();
+    timerStart();
 }
 
 TKRTAP::~TKRTAP()
@@ -874,7 +874,36 @@ void TKRTAP::timerStart()
         QString CurrentDataFeed(ui->DataFeedcomboBox->currentText());
         if (CurrentDataFeed == "Yahoo")
         {
-            Ticker_Timer->start(Time);//30000 = 30 seconds
+            if (ui->comboBoxRefresh->currentText() == "10s"){
+                Ticker_Timer->start(10000);//10 000 = 10 seconds
+            }
+            else if (ui->comboBoxRefresh->currentText() == "30s"){
+                Ticker_Timer->start(30000);//30 000 = 30 seconds
+            }
+            else if (ui->comboBoxRefresh->currentText() == "1m"){
+                Ticker_Timer->start(60000);//60 000 = 60 seconds
+            }
+            else if (ui->comboBoxRefresh->currentText() == "2m"){
+                Ticker_Timer->start(120000);//120 000 = 120 seconds
+            }
+            else if (ui->comboBoxRefresh->currentText() == "5m"){
+                Ticker_Timer->start(300000);//300 000 = 5 minutes
+            }
+            else if (ui->comboBoxRefresh->currentText() == "15m"){
+                Ticker_Timer->start(900000);//900000 = 15 minutes
+            }
+            else if (ui->comboBoxRefresh->currentText() == "30m"){
+                Ticker_Timer->start(1800000);//1 800 000 = 30 minutes
+            }
+            else if (ui->comboBoxRefresh->currentText() == "1h"){
+                Ticker_Timer->start(3600000);//3 600 000 = 1 hour
+            }
+            else if (ui->comboBoxRefresh->currentText() == "2h"){
+                Ticker_Timer->start(7200000);//7 200 000 = 2 hour
+            }
+            else{
+                Ticker_Timer->start(Time);//Automatic for the LED Panel
+            }
         }
         else
         {
@@ -925,11 +954,16 @@ void TKRTAP::updateTable(QStringList str_list, QStringList link_rss, QStringList
     int i = 0;
     while(true){
         if(!_rss_title.contains(str_list.at(i))){
-            result += str_list.at(i)+" / ";
-            ui->RSSBrowser->addItem(time_rss.at(i)+char(32)+str_list.at(i));
-            _rss_title.append(str_list.at(i));
-            _rss_link.append(link_rss.at(i));
-            _rss_time.append(time_rss.at(i));
+            if (str_list.at(i) == "Yahoo! Finance: RSS feed not found"){
+                //Do nothing
+            }
+            else{
+                result += str_list.at(i)+" / ";
+                ui->RSSBrowser->addItem(time_rss.at(i)+char(32)+str_list.at(i));
+                _rss_title.append(str_list.at(i));
+                _rss_link.append(link_rss.at(i));
+                _rss_time.append(time_rss.at(i));
+            }
         }
         if(_rss_title.count() >= rss_output_number){
             break;
