@@ -950,6 +950,7 @@ void TKRTAP::timerEnd()
  * @brief Starts the RSS loading process
  */
 void TKRTAP::startRSS(){
+    ui->button_loadRSS->setEnabled(false);
     RSSlinklistmodel->sort(0, Qt::AscendingOrder);
     _rss_client->loadRSS(RSSlinklistmodel->stringList());
     _rss_client->fetch();
@@ -989,6 +990,7 @@ void TKRTAP::updateTable(QStringList str_list, QStringList link_rss, QStringList
         }
         i++;
     }
+    ui->button_loadRSS->setEnabled(true);
     ui->Line2->setText(result);
     setLigne2();
 }
