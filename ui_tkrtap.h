@@ -486,6 +486,7 @@ public:
 
         button_loadRSS = new QPushButton(tab_RSS);
         button_loadRSS->setObjectName(QStringLiteral("button_loadRSS"));
+        button_loadRSS->setEnabled(true);
 
         verticalLayout_2->addWidget(button_loadRSS);
 
@@ -906,7 +907,7 @@ public:
         retranslateUi(TKRTAP);
         QObject::connect(actionExit, SIGNAL(triggered()), TKRTAP, SLOT(close()));
 
-        Tabs->setCurrentIndex(0);
+        Tabs->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(TKRTAP);

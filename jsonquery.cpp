@@ -10,10 +10,10 @@
 #include <QJsonObject>
 #include <QJsonArray>
 
-#define BLACK   0
-#define RED     1
-#define GREEN   2
-#define YELLOW  3
+#define BLACK   0           /**< @brief Color code for black*/
+#define RED     1           /**< @brief Color code for red*/
+#define GREEN   2           /**< @brief Color code for green*/
+#define YELLOW  3           /**< @brief Color code for yellow*/
 
 /**
  * @brief Default constructor

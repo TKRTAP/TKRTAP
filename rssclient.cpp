@@ -121,8 +121,6 @@ void RssClient::moreRSS(){
             str_rss << _model_data->item(i,0)->text();
             link_rss << _model_data->item(i,2)->text();
             date_rss << date_time.toString("HH:mm");
-//            qDebug() << date_time.toString("HH:mm");
-//            qDebug() << _model_data->item(i,1)->text();
         }
         _no_data = 0;
         emit rssFinished(str_rss,link_rss,date_rss);

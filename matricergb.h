@@ -32,7 +32,7 @@ public slots:
     void sendSpeed(unsigned char speed = 15);
 
 private :
-    unsigned char _scroll_speed;
+    unsigned char _scroll_speed;                /**< @brief The Scroll speed of the message in ms*/
     QString unicodetoCP437(QString unicode_str);
     QString createColorString(int line_no);
     unsigned char calculCRC(const char* message, int length);
