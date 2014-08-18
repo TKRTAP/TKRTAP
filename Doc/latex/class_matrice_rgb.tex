@@ -1,0 +1,287 @@
+\hypertarget{class_matrice_rgb}{\section{Matrice\+Rgb Class Reference}
+\label{class_matrice_rgb}\index{Matrice\+Rgb@{Matrice\+Rgb}}
+}
+
+
+The \hyperlink{class_matrice_rgb}{Matrice\+Rgb} class is used to link the physical matrix display with the rest of the program. It can write text on both lines of the display in 8 different colours.  
+
+
+
+
+{\ttfamily \#include $<$matricergb.\+h$>$}
+
+Inheritance diagram for Matrice\+Rgb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_matrice_rgb}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_matrice_rgb_abb55a1dd2c309df8694474dc45b00312}{set\+Port\+Name} (Q\+String nom\+\_\+port)
+\begin{DoxyCompactList}\small\item\em Sets the serial port that will be used. \end{DoxyCompactList}\item 
+bool \hyperlink{class_matrice_rgb_a8afdf4dd08a76e5dec012145ccff96e9}{toggle\+Serial\+Port} ()
+\begin{DoxyCompactList}\small\item\em Toggles the chosen serial port O\+N/\+O\+F\+F. Will pass any O\+S error through an error dialog. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a5cdc2dbbf78aab29dc654860b49a0891}{void \hyperlink{class_matrice_rgb_a5cdc2dbbf78aab29dc654860b49a0891}{send\+All} ()}\label{class_matrice_rgb_a5cdc2dbbf78aab29dc654860b49a0891}
+
+\begin{DoxyCompactList}\small\item\em Sends the text and colour information for both lines of the matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrice_rgb_aa130211f4d06d132699015a6bc6f3382}{send\+Line} (int line\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Sends the text and color information of one line to the matrix over the serial port. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrice_rgb_aaf9c466a7ddbe850730fed54e951078f}{send\+Speed} (unsigned char speed=15)
+\begin{DoxyCompactList}\small\item\em Sends the scroll speed (in ms) to the display. Default is 15ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_matrice_rgb_aea79aaf12329d33f4f0d5f06d15929a6}{\hyperlink{class_matrice_rgb_aea79aaf12329d33f4f0d5f06d15929a6}{Matrice\+Rgb} ()}\label{class_matrice_rgb_aea79aaf12329d33f4f0d5f06d15929a6}
+
+\begin{DoxyCompactList}\small\item\em Default constuctor This constructor does not need any parameters. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrice_rgb_a2e60d3e1608cf676b597aa3bbe7ffbe7}{set\+Text} (Q\+String txt\+\_\+line, int line\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Sets the text for a given line. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrice_rgb_aaf8facb904df841ef6f22a842715a2b9}{set\+String\+Color} (Q\+String txt\+\_\+colour, int line\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Sets the colour string for the specified line. \end{DoxyCompactList}\item 
+void \hyperlink{class_matrice_rgb_ad7ed9e4715ed21491f33b3db48f5d436}{set\+Default\+Colors} (int $\ast$colours)
+\begin{DoxyCompactList}\small\item\em Sets the default colour information. \end{DoxyCompactList}\item 
+Q\+List$<$ Q\+Serial\+Port\+Info $>$ \hyperlink{class_matrice_rgb_a49199cd529e603db49cffd85b813e49a}{get\+List\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns a Q\+List of the available serial ports as returned by the O\+S. This is a list of Q\+Serial\+Port\+Info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{class_matrice_rgb_a53a4ee970396d25468dd263d4bede177}{unicodeto\+C\+P437} (Q\+String unicode\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Converts a Unicode Q\+String to a slightly modified version of the C\+P437 \char`\"{}standard\char`\"{} that is used in the physical matrix's R\+O\+M. The matrix uses a slightly modified version of the \href{http://en.wikipedia.org/wiki/Cp437}{\tt C\+P437} character set. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_matrice_rgb_a05ea8eaf536cc656dfe993710221aa30}{create\+Color\+String} (int line\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Creates a color string using the default parameters. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{class_matrice_rgb_ab3067fe6615c058957d51f345ab2dba6}{calcul\+C\+R\+C} (const char $\ast$message, int length)
+\begin{DoxyCompactList}\small\item\em Calculates a simple C\+R\+C8 on a char array. This code was taken from \href{http://www.leonardomiliani.com/en/2013/un-semplice-crc8-per-arduino/}{\tt here}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_matrice_rgb_a4593df682e52dceeeb40cc10da8f7d19}{unsigned char \hyperlink{class_matrice_rgb_a4593df682e52dceeeb40cc10da8f7d19}{\+\_\+scroll\+\_\+speed}}\label{class_matrice_rgb_a4593df682e52dceeeb40cc10da8f7d19}
+
+\begin{DoxyCompactList}\small\item\em The Scroll speed of the message in ms. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a3e30ec8b0b50ea4eb417cba8b2b1ce20}{int \hyperlink{class_matrice_rgb_a3e30ec8b0b50ea4eb417cba8b2b1ce20}{\+\_\+number\+\_\+of\+\_\+led\+\_\+matrices}}\label{class_matrice_rgb_a3e30ec8b0b50ea4eb417cba8b2b1ce20}
+
+\begin{DoxyCompactList}\small\item\em The number of L\+E\+D matrices on the display. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_abec209cc567ab2b491f1b65140f2e9a1}{Q\+Serial\+Port $\ast$ \hyperlink{class_matrice_rgb_abec209cc567ab2b491f1b65140f2e9a1}{\+\_\+serial}}\label{class_matrice_rgb_abec209cc567ab2b491f1b65140f2e9a1}
+
+\begin{DoxyCompactList}\small\item\em Pointer to a Q\+Serial\+Port object. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a43eefbe8adeec9f8b899aa9957a769a9}{Q\+String \hyperlink{class_matrice_rgb_a43eefbe8adeec9f8b899aa9957a769a9}{\+\_\+string\+\_\+lines} \mbox{[}2\mbox{]}}\label{class_matrice_rgb_a43eefbe8adeec9f8b899aa9957a769a9}
+
+\begin{DoxyCompactList}\small\item\em The array of Q\+Strings containing the message's text. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a7bf7a29cbec11d90407df759baf888fd}{Q\+String \hyperlink{class_matrice_rgb_a7bf7a29cbec11d90407df759baf888fd}{\+\_\+string\+\_\+colours} \mbox{[}2\mbox{]}}\label{class_matrice_rgb_a7bf7a29cbec11d90407df759baf888fd}
+
+\begin{DoxyCompactList}\small\item\em The array of Q\+String containing the message's colour information. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a8298c7c9169743e9118e39e1d87edc8e}{Q\+String \hyperlink{class_matrice_rgb_a8298c7c9169743e9118e39e1d87edc8e}{\+\_\+string\+\_\+port\+\_\+name}}\label{class_matrice_rgb_a8298c7c9169743e9118e39e1d87edc8e}
+
+\begin{DoxyCompactList}\small\item\em The Q\+String containing the serial port's name. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a7a47ff848c6f752eaf5752795fd5be92}{int \hyperlink{class_matrice_rgb_a7a47ff848c6f752eaf5752795fd5be92}{\+\_\+port\+\_\+baudrate}}\label{class_matrice_rgb_a7a47ff848c6f752eaf5752795fd5be92}
+
+\begin{DoxyCompactList}\small\item\em The selected baud rate for the serial communication. \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_af6c6d8180553a5aaff757656ce9fc579}{int \hyperlink{class_matrice_rgb_af6c6d8180553a5aaff757656ce9fc579}{\+\_\+data\+\_\+bits\+\_\+port}}\label{class_matrice_rgb_af6c6d8180553a5aaff757656ce9fc579}
+
+\begin{DoxyCompactList}\small\item\em \+\_\+data\+\_\+bits\+\_\+port \end{DoxyCompactList}\item 
+\hypertarget{class_matrice_rgb_a0d66effd9d22be7ca9540df2fa534e7f}{int \hyperlink{class_matrice_rgb_a0d66effd9d22be7ca9540df2fa534e7f}{\+\_\+colours} \mbox{[}4\mbox{]}}\label{class_matrice_rgb_a0d66effd9d22be7ca9540df2fa534e7f}
+
+\begin{DoxyCompactList}\small\item\em Array containing the default colour parameters (text \& background) for both lines. The fist two elements are the text colour for line 1 and 2 respectively while the last two elements are the background colours. Used by \hyperlink{class_matrice_rgb_a05ea8eaf536cc656dfe993710221aa30}{create\+Color\+String}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_matrice_rgb}{Matrice\+Rgb} class is used to link the physical matrix display with the rest of the program. It can write text on both lines of the display in 8 different colours. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_matrice_rgb_ab3067fe6615c058957d51f345ab2dba6}{\index{Matrice\+Rgb@{Matrice\+Rgb}!calcul\+C\+R\+C@{calcul\+C\+R\+C}}
+\index{calcul\+C\+R\+C@{calcul\+C\+R\+C}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{calcul\+C\+R\+C}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Matrice\+Rgb\+::calcul\+C\+R\+C (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_matrice_rgb_ab3067fe6615c058957d51f345ab2dba6}
+
+
+Calculates a simple C\+R\+C8 on a char array. This code was taken from \href{http://www.leonardomiliani.com/en/2013/un-semplice-crc8-per-arduino/}{\tt here}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & A pointer to the beginning of the char array \\
+\hline
+{\em length} & The length in bytes of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated C\+R\+C 
+\end{DoxyReturn}
+\hypertarget{class_matrice_rgb_a05ea8eaf536cc656dfe993710221aa30}{\index{Matrice\+Rgb@{Matrice\+Rgb}!create\+Color\+String@{create\+Color\+String}}
+\index{create\+Color\+String@{create\+Color\+String}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{create\+Color\+String}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Matrice\+Rgb\+::create\+Color\+String (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+no}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_matrice_rgb_a05ea8eaf536cc656dfe993710221aa30}
+
+
+Creates a color string using the default parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+no} & The line for witch the sting is to be created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created Q\+String 
+\end{DoxyReturn}
+\hypertarget{class_matrice_rgb_a49199cd529e603db49cffd85b813e49a}{\index{Matrice\+Rgb@{Matrice\+Rgb}!get\+List\+Ports@{get\+List\+Ports}}
+\index{get\+List\+Ports@{get\+List\+Ports}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{get\+List\+Ports}]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$ Q\+Serial\+Port\+Info $>$ Matrice\+Rgb\+::get\+List\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_matrice_rgb_a49199cd529e603db49cffd85b813e49a}
+
+
+Returns a Q\+List of the available serial ports as returned by the O\+S. This is a list of Q\+Serial\+Port\+Info. 
+
+\begin{DoxyReturn}{Returns}
+A Q\+List of the available ports 
+\end{DoxyReturn}
+\hypertarget{class_matrice_rgb_aa130211f4d06d132699015a6bc6f3382}{\index{Matrice\+Rgb@{Matrice\+Rgb}!send\+Line@{send\+Line}}
+\index{send\+Line@{send\+Line}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{send\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void Matrice\+Rgb\+::send\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{line\+\_\+no}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_matrice_rgb_aa130211f4d06d132699015a6bc6f3382}
+
+
+Sends the text and color information of one line to the matrix over the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+\_\+no} & The line number \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_matrice_rgb_aaf9c466a7ddbe850730fed54e951078f}{\index{Matrice\+Rgb@{Matrice\+Rgb}!send\+Speed@{send\+Speed}}
+\index{send\+Speed@{send\+Speed}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{send\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Matrice\+Rgb\+::send\+Speed (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{speed = {\ttfamily 15}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_matrice_rgb_aaf9c466a7ddbe850730fed54e951078f}
+
+
+Sends the scroll speed (in ms) to the display. Default is 15ms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & The speed in ms \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_matrice_rgb_ad7ed9e4715ed21491f33b3db48f5d436}{\index{Matrice\+Rgb@{Matrice\+Rgb}!set\+Default\+Colors@{set\+Default\+Colors}}
+\index{set\+Default\+Colors@{set\+Default\+Colors}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{set\+Default\+Colors}]{\setlength{\rightskip}{0pt plus 5cm}void Matrice\+Rgb\+::set\+Default\+Colors (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{colours}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_matrice_rgb_ad7ed9e4715ed21491f33b3db48f5d436}
+
+
+Sets the default colour information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colours} & A pointer to the first element of ints containing the default colour information \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_matrice_rgb_abb55a1dd2c309df8694474dc45b00312}{\index{Matrice\+Rgb@{Matrice\+Rgb}!set\+Port\+Name@{set\+Port\+Name}}
+\index{set\+Port\+Name@{set\+Port\+Name}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{set\+Port\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void Matrice\+Rgb\+::set\+Port\+Name (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{port\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}}\label{class_matrice_rgb_abb55a1dd2c309df8694474dc45b00312}
+
+
+Sets the serial port that will be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+name} & The name of the serial port as specified by the O\+S \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_matrice_rgb_aaf8facb904df841ef6f22a842715a2b9}{\index{Matrice\+Rgb@{Matrice\+Rgb}!set\+String\+Color@{set\+String\+Color}}
+\index{set\+String\+Color@{set\+String\+Color}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{set\+String\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Matrice\+Rgb\+::set\+String\+Color (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{txt\+\_\+colour, }
+\item[{int}]{line\+\_\+no}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_matrice_rgb_aaf8facb904df841ef6f22a842715a2b9}
+
+
+Sets the colour string for the specified line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt\+\_\+colour} & The string containing the colour information \\
+\hline
+{\em line\+\_\+no} & The line number \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_matrice_rgb_a2e60d3e1608cf676b597aa3bbe7ffbe7}{\index{Matrice\+Rgb@{Matrice\+Rgb}!set\+Text@{set\+Text}}
+\index{set\+Text@{set\+Text}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{set\+Text}]{\setlength{\rightskip}{0pt plus 5cm}void Matrice\+Rgb\+::set\+Text (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{txt\+\_\+line, }
+\item[{int}]{line\+\_\+no}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_matrice_rgb_a2e60d3e1608cf676b597aa3bbe7ffbe7}
+
+
+Sets the text for a given line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt\+\_\+line} & The text to be set \\
+\hline
+{\em line\+\_\+no} & The line number \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_matrice_rgb_a8afdf4dd08a76e5dec012145ccff96e9}{\index{Matrice\+Rgb@{Matrice\+Rgb}!toggle\+Serial\+Port@{toggle\+Serial\+Port}}
+\index{toggle\+Serial\+Port@{toggle\+Serial\+Port}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{toggle\+Serial\+Port}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrice\+Rgb\+::toggle\+Serial\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_matrice_rgb_a8afdf4dd08a76e5dec012145ccff96e9}
+
+
+Toggles the chosen serial port O\+N/\+O\+F\+F. Will pass any O\+S error through an error dialog. 
+
+\begin{DoxyReturn}{Returns}
+True if port was opened else false 
+\end{DoxyReturn}
+\hypertarget{class_matrice_rgb_a53a4ee970396d25468dd263d4bede177}{\index{Matrice\+Rgb@{Matrice\+Rgb}!unicodeto\+C\+P437@{unicodeto\+C\+P437}}
+\index{unicodeto\+C\+P437@{unicodeto\+C\+P437}!Matrice\+Rgb@{Matrice\+Rgb}}
+\subsubsection[{unicodeto\+C\+P437}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Matrice\+Rgb\+::unicodeto\+C\+P437 (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{unicode\+\_\+str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_matrice_rgb_a53a4ee970396d25468dd263d4bede177}
+
+
+Converts a Unicode Q\+String to a slightly modified version of the C\+P437 \char`\"{}standard\char`\"{} that is used in the physical matrix's R\+O\+M. The matrix uses a slightly modified version of the \href{http://en.wikipedia.org/wiki/Cp437}{\tt C\+P437} character set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicode\+\_\+str} & The input Q\+String in Unicode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted Q\+String 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Q/\+Documents/\+Git\+Hub/\+T\+K\+R\+T\+A\+P/\hyperlink{matricergb_8h}{matricergb.\+h}\item 
+C\+:/\+Users/\+Q/\+Documents/\+Git\+Hub/\+T\+K\+R\+T\+A\+P/\hyperlink{matricergb_8cpp}{matricergb.\+cpp}\end{DoxyCompactItemize}

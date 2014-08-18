@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['_5fcolours',['_colours',['../class_matrice_rgb.html#a0d66effd9d22be7ca9540df2fa534e7f',1,'MatriceRgb']]],
+  ['_5fcurrent_5freply',['_current_reply',['../class_json_query.html#a421d1210dc3918200f4b2fad77f98726',1,'JsonQuery::_current_reply()'],['../class_rss_client.html#a1f4d94d00fc34becd2e0f456082a0c45',1,'RssClient::_current_reply()']]],
+  ['_5fcurrent_5ftag',['_current_tag',['../class_rss_client.html#abdb6d0e6dd2b395548a4a7305a7e1d7d',1,'RssClient']]],
+  ['_5fdata_5fbits_5fport',['_data_bits_port',['../class_matrice_rgb.html#af6c6d8180553a5aaff757656ce9fc579',1,'MatriceRgb']]],
+  ['_5fdate_5fstring',['_date_string',['../class_rss_client.html#ac9ec3cd22441d8e597702e73c7a67339',1,'RssClient']]],
+  ['_5fjson_5fquery',['_JSON_query',['../class_t_k_r_t_a_p.html#a6bbf119b4d676391d255cccff61fd3db',1,'TKRTAP']]],
+  ['_5flink_5fstring',['_link_string',['../class_rss_client.html#a13193830f4d917c6f891a3e75433e72b',1,'RssClient']]],
+  ['_5flink_5fstring_5flist',['_link_string_list',['../class_rss_client.html#a2ea54b1553fd8eaa6bb04e2ef829f6eb',1,'RssClient']]],
+  ['_5fmanager',['_manager',['../class_json_query.html#a6a656b6284308e14c88cd2f325d3f82d',1,'JsonQuery::_manager()'],['../class_rss_client.html#ac97d045a18b36d5c00b44180111ae6bb',1,'RssClient::_manager()']]],
+  ['_5fmodel_5fdata',['_model_data',['../class_rss_client.html#ab7a26f3940ef8106cb3cfd81f2e37635',1,'RssClient']]],
+  ['_5fno_5fdata',['_no_data',['../class_rss_client.html#a1a302e544e60a4c6d87b780baf5aa44b',1,'RssClient']]],
+  ['_5fno_5frss',['_no_rss',['../class_rss_client.html#ae6ae07ab3ed73a6a58ec4d7aad37fa74',1,'RssClient']]],
+  ['_5fnumber_5fof_5fled_5fmatrices',['_number_of_led_matrices',['../class_matrice_rgb.html#a3e30ec8b0b50ea4eb417cba8b2b1ce20',1,'MatriceRgb']]],
+  ['_5fport_5fbaudrate',['_port_baudrate',['../class_matrice_rgb.html#a7a47ff848c6f752eaf5752795fd5be92',1,'MatriceRgb']]],
+  ['_5fquandl_5fauth_5ftoken',['_Quandl_auth_token',['../class_json_query.html#a9f7f1c04e4e659e94046eafb7c9d65a9',1,'JsonQuery']]],
+  ['_5frss_5ftime',['_rss_time',['../class_t_k_r_t_a_p.html#aecca4344eb3c1de07ee5d9269dd288ca',1,'TKRTAP']]],
+  ['_5fscroll_5fspeed',['_scroll_speed',['../class_matrice_rgb.html#a4593df682e52dceeeb40cc10da8f7d19',1,'MatriceRgb']]],
+  ['_5fserial',['_serial',['../class_matrice_rgb.html#abec209cc567ab2b491f1b65140f2e9a1',1,'MatriceRgb']]],
+  ['_5fservice_5fname',['_service_name',['../class_json_query.html#acc3c7eca201fdc8e1ebc5d1f8763631c',1,'JsonQuery']]],
+  ['_5fstring_5fcolours',['_string_colours',['../class_matrice_rgb.html#a7bf7a29cbec11d90407df759baf888fd',1,'MatriceRgb']]],
+  ['_5fstring_5flines',['_string_lines',['../class_matrice_rgb.html#a43eefbe8adeec9f8b899aa9957a769a9',1,'MatriceRgb']]],
+  ['_5fstring_5fport_5fname',['_string_port_name',['../class_matrice_rgb.html#a8298c7c9169743e9118e39e1d87edc8e',1,'MatriceRgb']]],
+  ['_5fticker_5fnames',['_ticker_names',['../class_json_query.html#adf76972f9f175db206bb842fc73e7913',1,'JsonQuery']]],
+  ['_5ftitle_5fstring',['_title_string',['../class_rss_client.html#a3ad6f30274197c57d29bbd884b28420d',1,'RssClient']]],
+  ['_5fxml',['_xml',['../class_rss_client.html#a22dedd159a3374efc3bed38a296b98cc',1,'RssClient']]]
+];

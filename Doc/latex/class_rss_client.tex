@@ -1,0 +1,183 @@
+\hypertarget{class_rss_client}{\section{Rss\+Client Class Reference}
+\label{class_rss_client}\index{Rss\+Client@{Rss\+Client}}
+}
+
+
+The \hyperlink{class_rss_client}{Rss\+Client} class handles the reception and sorting (by date) of multiple R\+S\+S news feeds.  
+
+
+
+
+{\ttfamily \#include $<$rssclient.\+h$>$}
+
+Inheritance diagram for Rss\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rss_client}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_rss_client_a2f5ee7ba4e8780c9ed0601b5dd2e6beb}{void \hyperlink{class_rss_client_a2f5ee7ba4e8780c9ed0601b5dd2e6beb}{fetch} ()}\label{class_rss_client_a2f5ee7ba4e8780c9ed0601b5dd2e6beb}
+
+\begin{DoxyCompactList}\small\item\em fetches the first R\+S\+S link. If there are no R\+S\+S links loaded, will do nothing \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_rss_client_ab6d60bfd93285070055f5abddc4e3804}{rss\+Finished} (Q\+String\+List title\+\_\+rss, Q\+String\+List link\+\_\+rss, Q\+String\+List date\+\_\+rss)
+\begin{DoxyCompactList}\small\item\em Signal used when the R\+S\+S are finished reading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_rss_client_a99adb986f95f2c8b1b9201d45f4822b1}{\hyperlink{class_rss_client_a99adb986f95f2c8b1b9201d45f4822b1}{Rss\+Client} ()}\label{class_rss_client_a99adb986f95f2c8b1b9201d45f4822b1}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_rss_client_ac47a9d917d4c52b1e90fe59b6156fa47}{load\+R\+S\+S} (Q\+String\+List list\+\_\+\+R\+S\+S)
+\begin{DoxyCompactList}\small\item\em Sets the R\+S\+S links. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_rss_client_a6ef58c1b978fff1e437d07916b9d5ffb}{void \hyperlink{class_rss_client_a6ef58c1b978fff1e437d07916b9d5ffb}{parse\+Xml} ()}\label{class_rss_client_a6ef58c1b978fff1e437d07916b9d5ffb}
+
+\begin{DoxyCompactList}\small\item\em Parses the X\+M\+L object and extracts the title, date and link information. These are strored in \hyperlink{class_rss_client_ab7a26f3940ef8106cb3cfd81f2e37635}{Rss\+Client\+::\+\_\+model\+\_\+data}. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a280dfdaa7e4c1be4cf804c9c8f6f0cd4}{void \hyperlink{class_rss_client_a280dfdaa7e4c1be4cf804c9c8f6f0cd4}{more\+R\+S\+S} ()}\label{class_rss_client_a280dfdaa7e4c1be4cf804c9c8f6f0cd4}
+
+\begin{DoxyCompactList}\small\item\em Fetches every R\+S\+S link after the first and emits the \hyperlink{class_rss_client_ab6d60bfd93285070055f5abddc4e3804}{rss\+Finished} when all the R\+S\+S links are finished reading. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a6173e6e7b14eb6a7116e7341ea255015}{void \hyperlink{class_rss_client_a6173e6e7b14eb6a7116e7341ea255015}{ready\+Read} ()}\label{class_rss_client_a6173e6e7b14eb6a7116e7341ea255015}
+
+\begin{DoxyCompactList}\small\item\em Adds the received data to the X\+M\+L object. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a91d08eb4371ad934aee0a97d0701bc0b}{void \hyperlink{class_rss_client_a91d08eb4371ad934aee0a97d0701bc0b}{error} (Q\+Network\+Reply\+::\+Network\+Error)}\label{class_rss_client_a91d08eb4371ad934aee0a97d0701bc0b}
+
+\begin{DoxyCompactList}\small\item\em Error handling. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a9bd0db5161f3e7b64a9585ea56a0b235}{void \hyperlink{class_rss_client_a9bd0db5161f3e7b64a9585ea56a0b235}{meta\+Data\+Changed} ()}\label{class_rss_client_a9bd0db5161f3e7b64a9585ea56a0b235}
+
+\begin{DoxyCompactList}\small\item\em Used when meta data is changed. \end{DoxyCompactList}\item 
+void \hyperlink{class_rss_client_a4133d7464dc3ed28bca7b0537d890e58}{get} (Q\+Url url)
+\begin{DoxyCompactList}\small\item\em Sets up the Q\+Network\+Access\+Manager and connects its signals to various slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Date\+Time \hyperlink{class_rss_client_ad9154be13d0578b3863ad12b1472e72e}{parse\+Date} (Q\+String str\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Parses the date and time contained in a Q\+String. This function relies on the \href{http://www.partow.net/programming/datetime/index.html}{\tt Date And Time Parsing Utilities Library} by Arash Partow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_rss_client_ab7a26f3940ef8106cb3cfd81f2e37635}{Q\+Standard\+Item\+Model $\ast$ \hyperlink{class_rss_client_ab7a26f3940ef8106cb3cfd81f2e37635}{\+\_\+model\+\_\+data}}\label{class_rss_client_ab7a26f3940ef8106cb3cfd81f2e37635}
+
+\begin{DoxyCompactList}\small\item\em Contains all the extracted info from the R\+S\+S feeds. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a1a302e544e60a4c6d87b780baf5aa44b}{int \hyperlink{class_rss_client_a1a302e544e60a4c6d87b780baf5aa44b}{\+\_\+no\+\_\+data}}\label{class_rss_client_a1a302e544e60a4c6d87b780baf5aa44b}
+
+\begin{DoxyCompactList}\small\item\em Current count of received R\+S\+S news items. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_ae6ae07ab3ed73a6a58ec4d7aad37fa74}{int \hyperlink{class_rss_client_ae6ae07ab3ed73a6a58ec4d7aad37fa74}{\+\_\+no\+\_\+rss}}\label{class_rss_client_ae6ae07ab3ed73a6a58ec4d7aad37fa74}
+
+\begin{DoxyCompactList}\small\item\em Current count of R\+S\+S feeds. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a22dedd159a3374efc3bed38a296b98cc}{Q\+Xml\+Stream\+Reader \hyperlink{class_rss_client_a22dedd159a3374efc3bed38a296b98cc}{\+\_\+xml}}\label{class_rss_client_a22dedd159a3374efc3bed38a296b98cc}
+
+\begin{DoxyCompactList}\small\item\em X\+M\+L object. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_abdb6d0e6dd2b395548a4a7305a7e1d7d}{Q\+String \hyperlink{class_rss_client_abdb6d0e6dd2b395548a4a7305a7e1d7d}{\+\_\+current\+\_\+tag}}\label{class_rss_client_abdb6d0e6dd2b395548a4a7305a7e1d7d}
+
+\begin{DoxyCompactList}\small\item\em String containing the currently read tag from the X\+M\+L/\+R\+S\+S feed. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_ac9ec3cd22441d8e597702e73c7a67339}{Q\+String \hyperlink{class_rss_client_ac9ec3cd22441d8e597702e73c7a67339}{\+\_\+date\+\_\+string}}\label{class_rss_client_ac9ec3cd22441d8e597702e73c7a67339}
+
+\begin{DoxyCompactList}\small\item\em String containing the current date from the R\+S\+S News item. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a13193830f4d917c6f891a3e75433e72b}{Q\+String \hyperlink{class_rss_client_a13193830f4d917c6f891a3e75433e72b}{\+\_\+link\+\_\+string}}\label{class_rss_client_a13193830f4d917c6f891a3e75433e72b}
+
+\begin{DoxyCompactList}\small\item\em String containing the current link from the R\+S\+S News item. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a3ad6f30274197c57d29bbd884b28420d}{Q\+String \hyperlink{class_rss_client_a3ad6f30274197c57d29bbd884b28420d}{\+\_\+title\+\_\+string}}\label{class_rss_client_a3ad6f30274197c57d29bbd884b28420d}
+
+\begin{DoxyCompactList}\small\item\em String containing the current title from the R\+S\+S News item. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a2ea54b1553fd8eaa6bb04e2ef829f6eb}{Q\+String\+List \hyperlink{class_rss_client_a2ea54b1553fd8eaa6bb04e2ef829f6eb}{\+\_\+link\+\_\+string\+\_\+list}}\label{class_rss_client_a2ea54b1553fd8eaa6bb04e2ef829f6eb}
+
+\begin{DoxyCompactList}\small\item\em List of stings containing all the U\+R\+Ls for the R\+S\+S feeds to be read. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_ac97d045a18b36d5c00b44180111ae6bb}{Q\+Network\+Access\+Manager \hyperlink{class_rss_client_ac97d045a18b36d5c00b44180111ae6bb}{\+\_\+manager}}\label{class_rss_client_ac97d045a18b36d5c00b44180111ae6bb}
+
+\begin{DoxyCompactList}\small\item\em The manager used to perform the network request. \end{DoxyCompactList}\item 
+\hypertarget{class_rss_client_a1f4d94d00fc34becd2e0f456082a0c45}{Q\+Network\+Reply $\ast$ \hyperlink{class_rss_client_a1f4d94d00fc34becd2e0f456082a0c45}{\+\_\+current\+\_\+reply}}\label{class_rss_client_a1f4d94d00fc34becd2e0f456082a0c45}
+
+\begin{DoxyCompactList}\small\item\em The current network reply. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_rss_client}{Rss\+Client} class handles the reception and sorting (by date) of multiple R\+S\+S news feeds. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_rss_client_a4133d7464dc3ed28bca7b0537d890e58}{\index{Rss\+Client@{Rss\+Client}!get@{get}}
+\index{get@{get}!Rss\+Client@{Rss\+Client}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}void Rss\+Client\+::get (
+\begin{DoxyParamCaption}
+\item[{Q\+Url}]{url}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_rss_client_a4133d7464dc3ed28bca7b0537d890e58}
+
+
+Sets up the Q\+Network\+Access\+Manager and connects its signals to various slots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The url of the R\+S\+S feed to read \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_rss_client_ac47a9d917d4c52b1e90fe59b6156fa47}{\index{Rss\+Client@{Rss\+Client}!load\+R\+S\+S@{load\+R\+S\+S}}
+\index{load\+R\+S\+S@{load\+R\+S\+S}!Rss\+Client@{Rss\+Client}}
+\subsubsection[{load\+R\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}void Rss\+Client\+::load\+R\+S\+S (
+\begin{DoxyParamCaption}
+\item[{Q\+String\+List}]{list\+\_\+\+R\+S\+S}
+\end{DoxyParamCaption}
+)}}\label{class_rss_client_ac47a9d917d4c52b1e90fe59b6156fa47}
+
+
+Sets the R\+S\+S links. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+\_\+\+R\+S\+S} & The list of R\+S\+S links \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_rss_client_ad9154be13d0578b3863ad12b1472e72e}{\index{Rss\+Client@{Rss\+Client}!parse\+Date@{parse\+Date}}
+\index{parse\+Date@{parse\+Date}!Rss\+Client@{Rss\+Client}}
+\subsubsection[{parse\+Date}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Time Rss\+Client\+::parse\+Date (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{str\+\_\+date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_rss_client_ad9154be13d0578b3863ad12b1472e72e}
+
+
+Parses the date and time contained in a Q\+String. This function relies on the \href{http://www.partow.net/programming/datetime/index.html}{\tt Date And Time Parsing Utilities Library} by Arash Partow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+\_\+date} & The Q\+String containing the date to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Q\+Date\+Time containing the parsed date 
+\end{DoxyReturn}
+\hypertarget{class_rss_client_ab6d60bfd93285070055f5abddc4e3804}{\index{Rss\+Client@{Rss\+Client}!rss\+Finished@{rss\+Finished}}
+\index{rss\+Finished@{rss\+Finished}!Rss\+Client@{Rss\+Client}}
+\subsubsection[{rss\+Finished}]{\setlength{\rightskip}{0pt plus 5cm}void Rss\+Client\+::rss\+Finished (
+\begin{DoxyParamCaption}
+\item[{Q\+String\+List}]{title\+\_\+rss, }
+\item[{Q\+String\+List}]{link\+\_\+rss, }
+\item[{Q\+String\+List}]{date\+\_\+rss}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_rss_client_ab6d60bfd93285070055f5abddc4e3804}
+
+
+Signal used when the R\+S\+S are finished reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title\+\_\+rss} & List of R\+S\+S titles \\
+\hline
+{\em link\+\_\+rss} & List of the R\+S\+S links \\
+\hline
+{\em date\+\_\+rss} & List of the R\+S\+S published times \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Q/\+Documents/\+Git\+Hub/\+T\+K\+R\+T\+A\+P/\hyperlink{rssclient_8h}{rssclient.\+h}\item 
+C\+:/\+Users/\+Q/\+Documents/\+Git\+Hub/\+T\+K\+R\+T\+A\+P/\hyperlink{rssclient_8cpp}{rssclient.\+cpp}\end{DoxyCompactItemize}

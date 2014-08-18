@@ -1,0 +1,181 @@
+\hypertarget{class_json_query}{\section{Json\+Query Class Reference}
+\label{class_json_query}\index{Json\+Query@{Json\+Query}}
+}
+
+
+The \hyperlink{class_json_query}{Json\+Query} class handles the J\+S\+O\+N queries to Quandl and Yahoo and parses them into a simple string.  
+
+
+
+
+{\ttfamily \#include $<$jsonquery.\+h$>$}
+
+Inheritance diagram for Json\+Query\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_json_query}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_json_query_a7ac6e8248b34fec56a6cfadee48ff867}{void \hyperlink{class_json_query_a7ac6e8248b34fec56a6cfadee48ff867}{send\+Request} ()}\label{class_json_query_a7ac6e8248b34fec56a6cfadee48ff867}
+
+\begin{DoxyCompactList}\small\item\em Sets up the request and connects the proper signal to the parsing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_json_query_a384e9fd610b9046695a1f1f12e7e3ba6}{parsing\+Complete} (Q\+String\+List str\+\_\+list, Q\+String str\+\_\+colour)
+\begin{DoxyCompactList}\small\item\em Signal used when the J\+S\+O\+N request has been parsed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_json_query_a8ea4951a7e633564dd0b3fa09dc9ddec}{Json\+Query} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_json_query_a173751689d3ecc26d34a2673b83191f6}{set\+Service\+Name} (Q\+String service\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets the service used for the J\+S\+O\+N query. \end{DoxyCompactList}\item 
+void \hyperlink{class_json_query_a79acc90e20082bdfc6ab72a4c2444b26}{set\+Ticker\+Names} (Q\+String\+List tkr\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Sets the list of tickers. \end{DoxyCompactList}\item 
+void \hyperlink{class_json_query_afefa6f2e54d664970c0b4ba1d041606c}{set\+Auth\+Code\+Quandl} (Q\+String aut\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Set the Quandl auth code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_json_query_ad6bddcda7bd4af909e45bd2ca392b275}{void \hyperlink{class_json_query_ad6bddcda7bd4af909e45bd2ca392b275}{parse\+J\+S\+O\+N} ()}\label{class_json_query_ad6bddcda7bd4af909e45bd2ca392b275}
+
+\begin{DoxyCompactList}\small\item\em Parses the received information from the J\+S\+O\+N request and emits the \hyperlink{class_json_query_a384e9fd610b9046695a1f1f12e7e3ba6}{parsing\+Complete()} signal when done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Url \hyperlink{class_json_query_adc17cbbe26433d97421ea81fb873b2f0}{create\+Json\+Url} ()
+\begin{DoxyCompactList}\small\item\em Creates an U\+R\+L using the ticker names for Quandl or Yahoo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_json_query_acc3c7eca201fdc8e1ebc5d1f8763631c}{Q\+String \hyperlink{class_json_query_acc3c7eca201fdc8e1ebc5d1f8763631c}{\+\_\+service\+\_\+name}}\label{class_json_query_acc3c7eca201fdc8e1ebc5d1f8763631c}
+
+\begin{DoxyCompactList}\small\item\em The name of the J\+S\+O\+N data service provider. Note\+: Only Quandl and Yahoo are currently supported. \end{DoxyCompactList}\item 
+\hypertarget{class_json_query_adf76972f9f175db206bb842fc73e7913}{Q\+String\+List \hyperlink{class_json_query_adf76972f9f175db206bb842fc73e7913}{\+\_\+ticker\+\_\+names}}\label{class_json_query_adf76972f9f175db206bb842fc73e7913}
+
+\begin{DoxyCompactList}\small\item\em List of tickers. \end{DoxyCompactList}\item 
+\hypertarget{class_json_query_a9f7f1c04e4e659e94046eafb7c9d65a9}{Q\+String \hyperlink{class_json_query_a9f7f1c04e4e659e94046eafb7c9d65a9}{\+\_\+\+Quandl\+\_\+auth\+\_\+token}}\label{class_json_query_a9f7f1c04e4e659e94046eafb7c9d65a9}
+
+\begin{DoxyCompactList}\small\item\em The Quandl Auth token is needed to make more than 50 requests per day. \end{DoxyCompactList}\item 
+\hypertarget{class_json_query_a6a656b6284308e14c88cd2f325d3f82d}{Q\+Network\+Access\+Manager \hyperlink{class_json_query_a6a656b6284308e14c88cd2f325d3f82d}{\+\_\+manager}}\label{class_json_query_a6a656b6284308e14c88cd2f325d3f82d}
+
+\begin{DoxyCompactList}\small\item\em The Network manager used to send the J\+S\+O\+N requests. \end{DoxyCompactList}\item 
+\hypertarget{class_json_query_a421d1210dc3918200f4b2fad77f98726}{Q\+Network\+Reply $\ast$ \hyperlink{class_json_query_a421d1210dc3918200f4b2fad77f98726}{\+\_\+current\+\_\+reply}}\label{class_json_query_a421d1210dc3918200f4b2fad77f98726}
+
+\begin{DoxyCompactList}\small\item\em The current reply. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_json_query}{Json\+Query} class handles the J\+S\+O\+N queries to Quandl and Yahoo and parses them into a simple string. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_json_query_a8ea4951a7e633564dd0b3fa09dc9ddec}{\index{Json\+Query@{Json\+Query}!Json\+Query@{Json\+Query}}
+\index{Json\+Query@{Json\+Query}!Json\+Query@{Json\+Query}}
+\subsubsection[{Json\+Query}]{\setlength{\rightskip}{0pt plus 5cm}Json\+Query\+::\+Json\+Query (
+\begin{DoxyParamCaption}
+\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_json_query_a8ea4951a7e633564dd0b3fa09dc9ddec}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent of the object (default = 0) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_json_query_adc17cbbe26433d97421ea81fb873b2f0}{\index{Json\+Query@{Json\+Query}!create\+Json\+Url@{create\+Json\+Url}}
+\index{create\+Json\+Url@{create\+Json\+Url}!Json\+Query@{Json\+Query}}
+\subsubsection[{create\+Json\+Url}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Url Json\+Query\+::create\+Json\+Url (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_json_query_adc17cbbe26433d97421ea81fb873b2f0}
+
+
+Creates an U\+R\+L using the ticker names for Quandl or Yahoo. 
+
+\begin{DoxyReturn}{Returns}
+The Q\+Url for the specified J\+S\+O\+N request 
+\end{DoxyReturn}
+\hypertarget{class_json_query_a384e9fd610b9046695a1f1f12e7e3ba6}{\index{Json\+Query@{Json\+Query}!parsing\+Complete@{parsing\+Complete}}
+\index{parsing\+Complete@{parsing\+Complete}!Json\+Query@{Json\+Query}}
+\subsubsection[{parsing\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+Query\+::parsing\+Complete (
+\begin{DoxyParamCaption}
+\item[{Q\+String\+List}]{str\+\_\+list, }
+\item[{Q\+String}]{str\+\_\+colour}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_json_query_a384e9fd610b9046695a1f1f12e7e3ba6}
+
+
+Signal used when the J\+S\+O\+N request has been parsed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+\_\+list} & The formatted text message String List \\
+\hline
+{\em str\+\_\+colour} & The formatted colour string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_json_query_afefa6f2e54d664970c0b4ba1d041606c}{\index{Json\+Query@{Json\+Query}!set\+Auth\+Code\+Quandl@{set\+Auth\+Code\+Quandl}}
+\index{set\+Auth\+Code\+Quandl@{set\+Auth\+Code\+Quandl}!Json\+Query@{Json\+Query}}
+\subsubsection[{set\+Auth\+Code\+Quandl}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+Query\+::set\+Auth\+Code\+Quandl (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{auth\+\_\+code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_json_query_afefa6f2e54d664970c0b4ba1d041606c}
+
+
+Set the Quandl auth code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em auth\+\_\+code} & The auth code used by Quandl \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_json_query_a173751689d3ecc26d34a2673b83191f6}{\index{Json\+Query@{Json\+Query}!set\+Service\+Name@{set\+Service\+Name}}
+\index{set\+Service\+Name@{set\+Service\+Name}!Json\+Query@{Json\+Query}}
+\subsubsection[{set\+Service\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+Query\+::set\+Service\+Name (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{service\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_json_query_a173751689d3ecc26d34a2673b83191f6}
+
+
+Sets the service used for the J\+S\+O\+N query. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+\_\+name} & The name of the chosen service \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_json_query_a79acc90e20082bdfc6ab72a4c2444b26}{\index{Json\+Query@{Json\+Query}!set\+Ticker\+Names@{set\+Ticker\+Names}}
+\index{set\+Ticker\+Names@{set\+Ticker\+Names}!Json\+Query@{Json\+Query}}
+\subsubsection[{set\+Ticker\+Names}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+Query\+::set\+Ticker\+Names (
+\begin{DoxyParamCaption}
+\item[{Q\+String\+List}]{tkr\+\_\+names}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_json_query_a79acc90e20082bdfc6ab72a4c2444b26}
+
+
+Sets the list of tickers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tkr\+\_\+names} & The list of tickers \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Q/\+Documents/\+Git\+Hub/\+T\+K\+R\+T\+A\+P/\hyperlink{jsonquery_8h}{jsonquery.\+h}\item 
+C\+:/\+Users/\+Q/\+Documents/\+Git\+Hub/\+T\+K\+R\+T\+A\+P/\hyperlink{jsonquery_8cpp}{jsonquery.\+cpp}\end{DoxyCompactItemize}
