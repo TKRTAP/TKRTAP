@@ -76,7 +76,7 @@ TKRTAP::TKRTAP(QWidget *parent) :
     //Timer for refreshing stock prices and RSS data
     Ticker_Timer = new QTimer(this);
     RSS_Timer = new QTimer(this);
-    RSS_Timer->start(300000); //5 minutes
+    RSS_Timer->start(150000); //2.5 minutes
     connect(Ticker_Timer, SIGNAL(timeout()), this, SLOT(SetupRequest()));
     connect(ui->comboBoxRefresh,SIGNAL(currentIndexChanged(int)),this,SLOT(timerStart()));
     connect(RSS_Timer, SIGNAL(timeout()), this, SLOT(startRSS()));
