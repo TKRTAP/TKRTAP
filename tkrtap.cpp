@@ -10,17 +10,9 @@
 #include "marketmapview.h"
 #include "matricergb.h"
 #include "jsonquery.h"
-#define NOIR 0
-#define ROUGE 1
-#define VERT 2
-#define JAUNE 3
-#define BLEU 4
-#define MAGENTA 5
-#define CYAN 6
-#define BLANC 7
 
-#define LINE1 0
-#define LINE2 1
+#define LINE1 0                 /**< @brief Definition of line 1*/
+#define LINE2 1                 /**< @brief Definition of line 2*/
 
 TKRTAP::TKRTAP(QWidget *parent) :
     QMainWindow(parent),
