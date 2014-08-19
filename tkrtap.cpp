@@ -118,9 +118,12 @@ TKRTAP::TKRTAP(QWidget *parent) :
 
     connect(ui->RSSBrowser,SIGNAL(itemClicked(QListWidgetItem*)),this,SLOT(openRSSLink(QListWidgetItem*)));
 
-
     startRSS();
 
+    if (ui->comboBoxRefresh->currentText() == "10s"){
+        //SetupRequest is called when its 10s because the index of the comboBox is not changed in this case and thus the SetupRequest() is not triggered.
+        SetupRequest();
+    }
 }
 
 TKRTAP::~TKRTAP()
