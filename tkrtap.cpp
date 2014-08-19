@@ -128,6 +128,7 @@ TKRTAP::TKRTAP(QWidget *parent) :
 
 
     startRSS();
+
 }
 
 TKRTAP::~TKRTAP()
@@ -568,7 +569,12 @@ void TKRTAP::LoadSettings()
     int indexDataFeedComboBox = settings.value("ComboBoxDataFeed", 1).toInt();
     ui->DataFeedcomboBox->setCurrentIndex(indexDataFeedComboBox);
     int indexRefreshComboBox = settings.value("ComboBoxRefresh", 1).toInt();
-    ui->comboBoxRefresh->setCurrentIndex(indexRefreshComboBox);
+    if (settings.value("ComboBoxRefresh", 1).toString() == ""){
+        ui->comboBoxRefresh->setCurrentIndex(1);//An if to trigger the timer even if its the first time the user uses the software.
+    }
+    else{
+        ui->comboBoxRefresh->setCurrentIndex(indexRefreshComboBox);
+    }
 
     //Load RSS link list model
     //QStringList SavedRSSList = settings.value("RSSLinkList").toStringList();
