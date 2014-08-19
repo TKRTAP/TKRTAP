@@ -23,9 +23,9 @@ class MarketMapView : public QDialog
 {
     Q_OBJECT
 private slots:
-    void savePosition();
-    void loadPosition();
-    void closeEvent(QCloseEvent *event);
+    void savePosition();  /**< @brief Saves the position of the dialog box*/
+    void loadPosition();  /**< @brief Loads the position of the dialog box*/
+    void closeEvent(QCloseEvent *event);  /**< @brief Functions triggered when dialog box is closed*/
 
 
 public:
@@ -33,7 +33,7 @@ public:
     ~MarketMapView();
 
 private:
-    Ui::MarketMapView *ui;
+    Ui::MarketMapView *ui; /**< @brief Creating of the UI of the Market Map*/
 };
 
 #endif // MARKETMAPVIEW_H
