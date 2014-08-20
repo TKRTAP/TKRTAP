@@ -8,6 +8,11 @@
 #include "marketmapview.h"
 #include "ui_marketmapview.h"
 
+/**
+ * @brief Constructor
+ * @param parent The parent widget
+ * @param MapUrl ULR to display
+ */
 MarketMapView::MarketMapView(QWidget *parent,QUrl MapUrl) :
     QDialog(parent),
     ui(new Ui::MarketMapView)

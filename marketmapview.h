@@ -18,7 +18,9 @@
 namespace Ui {
 class MarketMapView;
 }
-
+/**
+ * @brief The MarketMapView class handles the display of the marketmap
+ */
 class MarketMapView : public QDialog
 {
     Q_OBJECT

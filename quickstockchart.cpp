@@ -8,6 +8,11 @@
 #include "quickstockchart.h"
 #include "ui_quickstockchart.h"
 
+/**
+ * @brief Constructor
+ * @param parent The parent widget
+ * @param QuickStockChartUrl URL to display
+ */
 QuickStockChart::QuickStockChart(QWidget *parent,QUrl QuickStockChartUrl) :
     QDialog(parent),
     ui(new Ui::QuickStockChart)

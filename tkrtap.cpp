@@ -14,6 +14,11 @@
 #define LINE1 0                 /**< @brief Definition of line 1*/
 #define LINE2 1                 /**< @brief Definition of line 2*/
 
+
+/**
+ * @brief The constructor
+ * @param parent The parent widget
+ */
 TKRTAP::TKRTAP(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TKRTAP)

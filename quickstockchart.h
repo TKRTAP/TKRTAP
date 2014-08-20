@@ -18,7 +18,9 @@
 namespace Ui {
 class QuickStockChart;
 }
-
+/**
+ * @brief The QuickStockChart class handles the display of the stock charts
+ */
 class QuickStockChart : public QDialog
 {
     Q_OBJECT

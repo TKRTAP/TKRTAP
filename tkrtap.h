@@ -38,6 +38,9 @@ namespace Ui {
 class TKRTAP;
 }
 
+/**
+ * @brief The main UI class
+ */
 class TKRTAP : public QMainWindow
 {
     Q_OBJECT
@@ -110,7 +113,7 @@ private slots:
     void on_Load_Button_RSS_clicked();   /**< @brief Triggers the load file dialog for the RSS link list*/
 
 public:
-    QStringListModel *RSSlinklistmodel;
+
     explicit TKRTAP(QWidget *parent = 0);
     ~TKRTAP();
 
@@ -120,22 +123,20 @@ private:
 
     JsonQuery *_JSON_query;                     /**< @brief JSON query object*/
 
-    Ui::TKRTAP *ui;
-    QStringList _rss_title,_rss_link;
+    Ui::TKRTAP *ui;                             /**< @brief The main UI*/
+    QStringList _rss_title;                     /**< @brief String list containing the RSS articles titles*/
+    QStringList _rss_link;                      /**< @brief String list containing the RSS articles links*/
     QStringList _rss_time;                      /**< @brief String list containing the RSS articles published times*/
-    RssClient *_rss_client;
-    QStringListModel *model;
+    RssClient *_rss_client;                     /**< @brief Pointer to the RSS client*/
+    QStringListModel *model;                    /**< @brief Model containing the tickers*/
+    QStringListModel *RSSlinklistmodel;         /**< @brief Model containing the RSS links*/
     MarketMapView *mDialog;                     /**< @brief Dialog box of the Market Map*/
     QuickStockChart *mDialog2;                  /**< @brief Dialog box of the Quick finviz stock chart*/
 
-    MatriceRgb *_matrice;
-    QString _nom_port;
-    QTimer *Ticker_Timer;
-    QTimer *RSS_Timer;
-
-    //Variables used for stock price data
-    QNetworkAccessManager manager;
-    QNetworkReply *currentReply;
+    MatriceRgb *_matrice;                       /**< @brief Pointer to the matrix*/
+    QString _nom_port;                          /**< @brief The port name used for the matrix*/
+    QTimer *Ticker_Timer;                       /**< @brief Timer used to refresh the stock info (prices, etc)*/
+    QTimer *RSS_Timer;                          /**< @brief Timer used to refresh the RSS articles*/
    };
 
 #endif // TKRTAP_H
