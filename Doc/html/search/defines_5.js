@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['red',['RED',['../jsonquery_8cpp.html#a8d23feea868a983c8c2b661e1e16972f',1,'jsonquery.cpp']]]
+  ['nbcharscomm',['NBCHARSCOMM',['../matricergb_8cpp.html#a49ae3a77ea198cb32f79adc163a5daa4',1,'matricergb.cpp']]],
+  ['nbretry',['NBRETRY',['../matricergb_8cpp.html#af710cdb937d293f05752f0bf121be64e',1,'matricergb.cpp']]]
 ];

@@ -1,6 +1,22 @@
 var searchData=
 [
-  ['timerend',['timerEnd',['../class_t_k_r_t_a_p.html#a6bdc036a4c99e281cc12fb7ab81e8922',1,'TKRTAP']]],
-  ['timerstart',['timerStart',['../class_t_k_r_t_a_p.html#adb0ea6e18fbf661f2bf52655f552b907',1,'TKRTAP']]],
-  ['toggleserialport',['toggleSerialPort',['../class_matrice_rgb.html#a8afdf4dd08a76e5dec012145ccff96e9',1,'MatriceRgb::toggleSerialPort()'],['../class_t_k_r_t_a_p.html#ad037f38e28ef942688d7ad6e0bf4a62c',1,'TKRTAP::toggleSerialPort()']]]
+  ['saveposition',['savePosition',['../class_market_map_view.html#ae680dd9e4cffd99085ce9d0aecaebd0c',1,'MarketMapView::savePosition()'],['../class_quick_stock_chart.html#af99b1a624e729e2328350f38968aa1e1',1,'QuickStockChart::savePosition()']]],
+  ['savesettings',['SaveSettings',['../class_t_k_r_t_a_p.html#a3f0d2df000debf0e3d762cd42309ddd1',1,'TKRTAP']]],
+  ['sendall',['sendAll',['../class_matrice_rgb.html#a5cdc2dbbf78aab29dc654860b49a0891',1,'MatriceRgb']]],
+  ['sendline',['sendLine',['../class_matrice_rgb.html#aa130211f4d06d132699015a6bc6f3382',1,'MatriceRgb']]],
+  ['sendrequest',['sendRequest',['../class_json_query.html#a7ac6e8248b34fec56a6cfadee48ff867',1,'JsonQuery']]],
+  ['sendspeed',['sendSpeed',['../class_matrice_rgb.html#aaf9c466a7ddbe850730fed54e951078f',1,'MatriceRgb']]],
+  ['setauthcodequandl',['setAuthCodeQuandl',['../class_json_query.html#afefa6f2e54d664970c0b4ba1d041606c',1,'JsonQuery']]],
+  ['setcouleurs',['setCouleurs',['../class_t_k_r_t_a_p.html#a6ddb840aa530eb4834f137907c82309f',1,'TKRTAP']]],
+  ['setdefaultcolors',['setDefaultColors',['../class_matrice_rgb.html#ad7ed9e4715ed21491f33b3db48f5d436',1,'MatriceRgb']]],
+  ['setligne1',['setLigne1',['../class_t_k_r_t_a_p.html#ad7900d7be69bfb772b4aa3de070dcb98',1,'TKRTAP']]],
+  ['setligne2',['setLigne2',['../class_t_k_r_t_a_p.html#a2a86e3fb126a976efa13aae2bbf3d231',1,'TKRTAP']]],
+  ['setportname',['setPortName',['../class_matrice_rgb.html#abb55a1dd2c309df8694474dc45b00312',1,'MatriceRgb']]],
+  ['setscrollspeed',['setScrollSpeed',['../class_t_k_r_t_a_p.html#a9eb892a2a12c96d79d95968942811269',1,'TKRTAP']]],
+  ['setservicename',['setServiceName',['../class_json_query.html#a173751689d3ecc26d34a2673b83191f6',1,'JsonQuery']]],
+  ['setstringcolor',['setStringColor',['../class_matrice_rgb.html#aaf8facb904df841ef6f22a842715a2b9',1,'MatriceRgb']]],
+  ['settext',['setText',['../class_matrice_rgb.html#a2e60d3e1608cf676b597aa3bbe7ffbe7',1,'MatriceRgb']]],
+  ['settickernames',['setTickerNames',['../class_json_query.html#a79acc90e20082bdfc6ab72a4c2444b26',1,'JsonQuery']]],
+  ['setuprequest',['SetupRequest',['../class_t_k_r_t_a_p.html#a9105ea4fbf86ffb8e373275677ea99ee',1,'TKRTAP']]],
+  ['startrss',['startRSS',['../class_t_k_r_t_a_p.html#a2e63c2e8c0b9f5662b06e8686eac0e64',1,'TKRTAP']]]
 ];

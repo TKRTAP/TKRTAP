@@ -1,20 +1,7 @@
 var searchData=
 [
-  ['savesettings',['SaveSettings',['../class_t_k_r_t_a_p.html#a3f0d2df000debf0e3d762cd42309ddd1',1,'TKRTAP']]],
-  ['sendall',['sendAll',['../class_matrice_rgb.html#a5cdc2dbbf78aab29dc654860b49a0891',1,'MatriceRgb']]],
-  ['sendline',['sendLine',['../class_matrice_rgb.html#aa130211f4d06d132699015a6bc6f3382',1,'MatriceRgb']]],
-  ['sendrequest',['sendRequest',['../class_json_query.html#a7ac6e8248b34fec56a6cfadee48ff867',1,'JsonQuery']]],
-  ['sendspeed',['sendSpeed',['../class_matrice_rgb.html#aaf9c466a7ddbe850730fed54e951078f',1,'MatriceRgb']]],
-  ['setauthcodequandl',['setAuthCodeQuandl',['../class_json_query.html#afefa6f2e54d664970c0b4ba1d041606c',1,'JsonQuery']]],
-  ['setcouleurs',['setCouleurs',['../class_t_k_r_t_a_p.html#a6ddb840aa530eb4834f137907c82309f',1,'TKRTAP']]],
-  ['setdefaultcolors',['setDefaultColors',['../class_matrice_rgb.html#ad7ed9e4715ed21491f33b3db48f5d436',1,'MatriceRgb']]],
-  ['setligne1',['setLigne1',['../class_t_k_r_t_a_p.html#ad7900d7be69bfb772b4aa3de070dcb98',1,'TKRTAP']]],
-  ['setligne2',['setLigne2',['../class_t_k_r_t_a_p.html#a2a86e3fb126a976efa13aae2bbf3d231',1,'TKRTAP']]],
-  ['setportname',['setPortName',['../class_matrice_rgb.html#abb55a1dd2c309df8694474dc45b00312',1,'MatriceRgb']]],
-  ['setservicename',['setServiceName',['../class_json_query.html#a173751689d3ecc26d34a2673b83191f6',1,'JsonQuery']]],
-  ['setstringcolor',['setStringColor',['../class_matrice_rgb.html#aaf8facb904df841ef6f22a842715a2b9',1,'MatriceRgb']]],
-  ['settext',['setText',['../class_matrice_rgb.html#a2e60d3e1608cf676b597aa3bbe7ffbe7',1,'MatriceRgb']]],
-  ['settickernames',['setTickerNames',['../class_json_query.html#a79acc90e20082bdfc6ab72a4c2444b26',1,'JsonQuery']]],
-  ['setuprequest',['SetupRequest',['../class_t_k_r_t_a_p.html#a9105ea4fbf86ffb8e373275677ea99ee',1,'TKRTAP']]],
-  ['startrss',['startRSS',['../class_t_k_r_t_a_p.html#a2e63c2e8c0b9f5662b06e8686eac0e64',1,'TKRTAP']]]
+  ['readyread',['readyRead',['../class_rss_client.html#a6173e6e7b14eb6a7116e7341ea255015',1,'RssClient']]],
+  ['removing_5fduplicates_5frss',['Removing_Duplicates_RSS',['../class_t_k_r_t_a_p.html#a7e405d4c3d7f022889242376072ce821',1,'TKRTAP']]],
+  ['rssclient',['RssClient',['../class_rss_client.html#a99adb986f95f2c8b1b9201d45f4822b1',1,'RssClient']]],
+  ['rssfinished',['rssFinished',['../class_rss_client.html#ab6d60bfd93285070055f5abddc4e3804',1,'RssClient']]]
 ];

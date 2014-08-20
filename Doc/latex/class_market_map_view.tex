@@ -1,6 +1,15 @@
 \hypertarget{class_market_map_view}{\section{Market\+Map\+View Class Reference}
 \label{class_market_map_view}\index{Market\+Map\+View@{Market\+Map\+View}}
 }
+
+
+The \hyperlink{class_market_map_view}{Market\+Map\+View} class handles the display of the marketmap.  
+
+
+
+
+{\ttfamily \#include $<$marketmapview.\+h$>$}
+
 Inheritance diagram for Market\+Map\+View\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,27 +19,51 @@ Inheritance diagram for Market\+Map\+View\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_market_map_view_ad68b944d6f3ef350a1d6925b2f974a90}{{\bfseries Market\+Map\+View} (Q\+Widget $\ast$parent=0, Q\+Url Map\+Url=Q\+Url(\char`\"{}http\+://www.\+finviz.\+com/map.\+ashx?t=sec\char`\"{}))}\label{class_market_map_view_ad68b944d6f3ef350a1d6925b2f974a90}
-
-\end{DoxyCompactItemize}
+\hyperlink{class_market_map_view_ad68b944d6f3ef350a1d6925b2f974a90}{Market\+Map\+View} (Q\+Widget $\ast$parent=0, Q\+Url Map\+Url=Q\+Url(\char`\"{}http\+://www.\+finviz.\+com/map.\+ashx?t=sec\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_market_map_view_ae680dd9e4cffd99085ce9d0aecaebd0c}{void {\bfseries save\+Position} ()}\label{class_market_map_view_ae680dd9e4cffd99085ce9d0aecaebd0c}
+\hypertarget{class_market_map_view_ae680dd9e4cffd99085ce9d0aecaebd0c}{void \hyperlink{class_market_map_view_ae680dd9e4cffd99085ce9d0aecaebd0c}{save\+Position} ()}\label{class_market_map_view_ae680dd9e4cffd99085ce9d0aecaebd0c}
 
-\item 
-\hypertarget{class_market_map_view_a5bf3380427a2fca3737acff9c0e82bf2}{void {\bfseries load\+Position} ()}\label{class_market_map_view_a5bf3380427a2fca3737acff9c0e82bf2}
+\begin{DoxyCompactList}\small\item\em Saves the position of the dialog box. \end{DoxyCompactList}\item 
+\hypertarget{class_market_map_view_a5bf3380427a2fca3737acff9c0e82bf2}{void \hyperlink{class_market_map_view_a5bf3380427a2fca3737acff9c0e82bf2}{load\+Position} ()}\label{class_market_map_view_a5bf3380427a2fca3737acff9c0e82bf2}
 
-\item 
-\hypertarget{class_market_map_view_aeb74298240bbc6d4af02e06c3cc8aa79}{void {\bfseries close\+Event} (Q\+Close\+Event $\ast$event)}\label{class_market_map_view_aeb74298240bbc6d4af02e06c3cc8aa79}
+\begin{DoxyCompactList}\small\item\em Loads the position of the dialog box. \end{DoxyCompactList}\item 
+\hypertarget{class_market_map_view_aeb74298240bbc6d4af02e06c3cc8aa79}{void \hyperlink{class_market_map_view_aeb74298240bbc6d4af02e06c3cc8aa79}{close\+Event} (Q\+Close\+Event $\ast$event)}\label{class_market_map_view_aeb74298240bbc6d4af02e06c3cc8aa79}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Functions triggered when dialog box is closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_market_map_view_ad147de5cb234034d0140aa3ba132d49b}{Ui\+::\+Market\+Map\+View $\ast$ {\bfseries ui}}\label{class_market_map_view_ad147de5cb234034d0140aa3ba132d49b}
+\hypertarget{class_market_map_view_ad147de5cb234034d0140aa3ba132d49b}{Ui\+::\+Market\+Map\+View $\ast$ \hyperlink{class_market_map_view_ad147de5cb234034d0140aa3ba132d49b}{ui}}\label{class_market_map_view_ad147de5cb234034d0140aa3ba132d49b}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creating of the U\+I of the Market Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_market_map_view}{Market\+Map\+View} class handles the display of the marketmap. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_market_map_view_ad68b944d6f3ef350a1d6925b2f974a90}{\index{Market\+Map\+View@{Market\+Map\+View}!Market\+Map\+View@{Market\+Map\+View}}
+\index{Market\+Map\+View@{Market\+Map\+View}!Market\+Map\+View@{Market\+Map\+View}}
+\subsubsection[{Market\+Map\+View}]{\setlength{\rightskip}{0pt plus 5cm}Market\+Map\+View\+::\+Market\+Map\+View (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}, }
+\item[{Q\+Url}]{Map\+Url = {\ttfamily QUrl(\char`\"{}http\+://www.finviz.com/map.ashx?t=sec\char`\"{})}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_market_map_view_ad68b944d6f3ef350a1d6925b2f974a90}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget \\
+\hline
+{\em Map\+Url} & U\+L\+R to display \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

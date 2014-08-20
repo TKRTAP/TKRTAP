@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['saveposition',['savePosition',['../class_market_map_view.html#ae680dd9e4cffd99085ce9d0aecaebd0c',1,'MarketMapView::savePosition()'],['../class_quick_stock_chart.html#af99b1a624e729e2328350f38968aa1e1',1,'QuickStockChart::savePosition()']]],
   ['savesettings',['SaveSettings',['../class_t_k_r_t_a_p.html#a3f0d2df000debf0e3d762cd42309ddd1',1,'TKRTAP']]],
   ['sendall',['sendAll',['../class_matrice_rgb.html#a5cdc2dbbf78aab29dc654860b49a0891',1,'MatriceRgb']]],
   ['sendline',['sendLine',['../class_matrice_rgb.html#aa130211f4d06d132699015a6bc6f3382',1,'MatriceRgb']]],
@@ -11,6 +12,7 @@ var searchData=
   ['setligne1',['setLigne1',['../class_t_k_r_t_a_p.html#ad7900d7be69bfb772b4aa3de070dcb98',1,'TKRTAP']]],
   ['setligne2',['setLigne2',['../class_t_k_r_t_a_p.html#a2a86e3fb126a976efa13aae2bbf3d231',1,'TKRTAP']]],
   ['setportname',['setPortName',['../class_matrice_rgb.html#abb55a1dd2c309df8694474dc45b00312',1,'MatriceRgb']]],
+  ['setscrollspeed',['setScrollSpeed',['../class_t_k_r_t_a_p.html#a9eb892a2a12c96d79d95968942811269',1,'TKRTAP']]],
   ['setservicename',['setServiceName',['../class_json_query.html#a173751689d3ecc26d34a2673b83191f6',1,'JsonQuery']]],
   ['setstringcolor',['setStringColor',['../class_matrice_rgb.html#aaf8facb904df841ef6f22a842715a2b9',1,'MatriceRgb']]],
   ['settext',['setText',['../class_matrice_rgb.html#a2e60d3e1608cf676b597aa3bbe7ffbe7',1,'MatriceRgb']]],

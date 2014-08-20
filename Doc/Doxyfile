@@ -844,7 +844,8 @@ EXCLUDE                = ../datetime_utils.hpp \
                          ../strtk.hpp \
                          ../ui_marketmapview.h \
                          ../ui_quickstockchart.h \
-                         ../ui_tkrtap.h
+                         ../ui_tkrtap.h \
+                         ../main.cpp
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded

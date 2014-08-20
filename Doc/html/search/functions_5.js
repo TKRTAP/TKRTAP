@@ -8,6 +8,7 @@ var searchData=
   ['linkscreener',['linkScreener',['../class_t_k_r_t_a_p.html#acefe694e3e0bf827a51817eaaca3e0da',1,'TKRTAP']]],
   ['linksec',['linkSEC',['../class_t_k_r_t_a_p.html#a0fd918db6da7ef497b167f3af9a21204',1,'TKRTAP']]],
   ['loadmarketmap',['LoadMarketMap',['../class_t_k_r_t_a_p.html#a5978ee276d97cfbdac62aa6a825d4449',1,'TKRTAP']]],
+  ['loadposition',['loadPosition',['../class_market_map_view.html#a5bf3380427a2fca3737acff9c0e82bf2',1,'MarketMapView::loadPosition()'],['../class_quick_stock_chart.html#ac9e5329aad2b5bce87fa46d05da331ef',1,'QuickStockChart::loadPosition()']]],
   ['loadrss',['loadRSS',['../class_rss_client.html#ac47a9d917d4c52b1e90fe59b6156fa47',1,'RssClient']]],
   ['loadsettings',['LoadSettings',['../class_t_k_r_t_a_p.html#a15cd045fcc12644e07291ef00c9bc6f5',1,'TKRTAP']]]
 ];

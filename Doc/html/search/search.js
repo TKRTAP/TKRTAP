@@ -10,9 +10,9 @@ var indexSectionsWithContent =
   0: "_bcdefgijlmnopqrstuvy",
   1: "jmqrt",
   2: "jmqrt",
-  3: "cefgjlmoprstuv",
-  4: "_",
-  5: "bdginry",
+  3: "cefgjlmopqrstuv",
+  4: "_mrtu",
+  5: "bdgilnry",
   6: "t"
 };
 

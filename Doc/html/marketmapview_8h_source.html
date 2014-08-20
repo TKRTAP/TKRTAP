@@ -101,30 +101,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Ui {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="class_market_map_view.html">MarketMapView</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_market_map_view.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_market_map_view.html">MarketMapView</a> : <span class="keyword">public</span> QDialog</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> savePosition();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> loadPosition();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> closeEvent(QCloseEvent *event);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_market_map_view.html">MarketMapView</a>(QWidget *parent = 0,QUrl MapUrl=QUrl(<span class="stringliteral">&quot;http://www.finviz.com/map.ashx?t=sec&quot;</span>));</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    ~<a class="code" href="class_market_map_view.html">MarketMapView</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Ui::MarketMapView *ui;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif // MARKETMAPVIEW_H</span></div>
-<div class="ttc" id="class_market_map_view_html"><div class="ttname"><a href="class_market_map_view.html">MarketMapView</a></div><div class="ttdef"><b>Definition:</b> marketmapview.h:22</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_market_map_view.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_market_map_view.html">MarketMapView</a> : <span class="keyword">public</span> QDialog</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_market_map_view.html#ae680dd9e4cffd99085ce9d0aecaebd0c">savePosition</a>();  </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_market_map_view.html#a5bf3380427a2fca3737acff9c0e82bf2">loadPosition</a>();  </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_market_map_view.html#aeb74298240bbc6d4af02e06c3cc8aa79">closeEvent</a>(QCloseEvent *event);  </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_market_map_view.html#ad68b944d6f3ef350a1d6925b2f974a90">MarketMapView</a>(QWidget *parent = 0,QUrl MapUrl=QUrl(<span class="stringliteral">&quot;http://www.finviz.com/map.ashx?t=sec&quot;</span>));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="class_market_map_view.html">MarketMapView</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_market_map_view.html#ad147de5cb234034d0140aa3ba132d49b">   38</a></span>&#160;    Ui::MarketMapView *<a class="code" href="class_market_map_view.html#ad147de5cb234034d0140aa3ba132d49b">ui</a>; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif // MARKETMAPVIEW_H</span></div>
+<div class="ttc" id="class_market_map_view_html"><div class="ttname"><a href="class_market_map_view.html">MarketMapView</a></div><div class="ttdoc">The MarketMapView class handles the display of the marketmap. </div><div class="ttdef"><b>Definition:</b> marketmapview.h:24</div></div>
+<div class="ttc" id="class_market_map_view_html_ad68b944d6f3ef350a1d6925b2f974a90"><div class="ttname"><a href="class_market_map_view.html#ad68b944d6f3ef350a1d6925b2f974a90">MarketMapView::MarketMapView</a></div><div class="ttdeci">MarketMapView(QWidget *parent=0, QUrl MapUrl=QUrl(&quot;http://www.finviz.com/map.ashx?t=sec&quot;))</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> marketmapview.cpp:16</div></div>
+<div class="ttc" id="class_market_map_view_html_ae680dd9e4cffd99085ce9d0aecaebd0c"><div class="ttname"><a href="class_market_map_view.html#ae680dd9e4cffd99085ce9d0aecaebd0c">MarketMapView::savePosition</a></div><div class="ttdeci">void savePosition()</div><div class="ttdoc">Saves the position of the dialog box. </div><div class="ttdef"><b>Definition:</b> marketmapview.cpp:34</div></div>
+<div class="ttc" id="class_market_map_view_html_aeb74298240bbc6d4af02e06c3cc8aa79"><div class="ttname"><a href="class_market_map_view.html#aeb74298240bbc6d4af02e06c3cc8aa79">MarketMapView::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *event)</div><div class="ttdoc">Functions triggered when dialog box is closed. </div><div class="ttdef"><b>Definition:</b> marketmapview.cpp:59</div></div>
+<div class="ttc" id="class_market_map_view_html_a5bf3380427a2fca3737acff9c0e82bf2"><div class="ttname"><a href="class_market_map_view.html#a5bf3380427a2fca3737acff9c0e82bf2">MarketMapView::loadPosition</a></div><div class="ttdeci">void loadPosition()</div><div class="ttdoc">Loads the position of the dialog box. </div><div class="ttdef"><b>Definition:</b> marketmapview.cpp:46</div></div>
+<div class="ttc" id="class_market_map_view_html_ad147de5cb234034d0140aa3ba132d49b"><div class="ttname"><a href="class_market_map_view.html#ad147de5cb234034d0140aa3ba132d49b">MarketMapView::ui</a></div><div class="ttdeci">Ui::MarketMapView * ui</div><div class="ttdoc">Creating of the UI of the Market Map. </div><div class="ttdef"><b>Definition:</b> marketmapview.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 18 2014 16:58:43 for TKRTAP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 20 2014 10:09:36 for TKRTAP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

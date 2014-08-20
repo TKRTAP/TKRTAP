@@ -22,5 +22,6 @@ var searchData=
   ['on_5fsecbuttontextedit_5ftextchanged',['on_SECButtonTextEdit_textChanged',['../class_t_k_r_t_a_p.html#a13ba09fe615e6ea1a8aede0589b79bce',1,'TKRTAP']]],
   ['on_5fspreadsheet_5fclicked',['on_Spreadsheet_clicked',['../class_t_k_r_t_a_p.html#a5019b726b6b221933abc42259996a999',1,'TKRTAP']]],
   ['on_5fspreadsheetbuttontextedit_5ftextchanged',['on_SpreadsheetButtonTextEdit_textChanged',['../class_t_k_r_t_a_p.html#aea76795d49f0ce78a0f1ddf1bd47cd75',1,'TKRTAP']]],
-  ['openrsslink',['openRSSLink',['../class_t_k_r_t_a_p.html#a0dd268ebec54f111eef86da401f459a1',1,'TKRTAP']]]
+  ['openrsslink',['openRSSLink',['../class_t_k_r_t_a_p.html#a0dd268ebec54f111eef86da401f459a1',1,'TKRTAP']]],
+  ['openstockchart',['openStockChart',['../class_t_k_r_t_a_p.html#a0d824d019f7724b276db0622bd43adbf',1,'TKRTAP']]]
 ];

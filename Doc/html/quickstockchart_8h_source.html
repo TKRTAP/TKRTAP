@@ -101,29 +101,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Ui {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="class_quick_stock_chart.html">QuickStockChart</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_quick_stock_chart.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_quick_stock_chart.html">QuickStockChart</a> : <span class="keyword">public</span> QDialog</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> savePosition();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> loadPosition();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> closeEvent(QCloseEvent *event);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_quick_stock_chart.html">QuickStockChart</a>(QWidget *parent = 0,QUrl QuickStockChartUrl=QUrl(<span class="stringliteral">&quot;http://www.finviz.com/chart.ashx?t=SPY&amp;ty=c&amp;ta=1&amp;p=d&amp;s=l&quot;</span>));</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="class_quick_stock_chart.html">QuickStockChart</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Ui::QuickStockChart *ui;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // QUICKSTOCKCHART_H</span></div>
-<div class="ttc" id="class_quick_stock_chart_html"><div class="ttname"><a href="class_quick_stock_chart.html">QuickStockChart</a></div><div class="ttdef"><b>Definition:</b> quickstockchart.h:22</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_quick_stock_chart.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_quick_stock_chart.html">QuickStockChart</a> : <span class="keyword">public</span> QDialog</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_quick_stock_chart.html#af99b1a624e729e2328350f38968aa1e1">savePosition</a>();   </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_quick_stock_chart.html#ac9e5329aad2b5bce87fa46d05da331ef">loadPosition</a>();   </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_quick_stock_chart.html#a764cae6c7bcd52ee0d7fe42dd4b33929">closeEvent</a>(QCloseEvent *event); </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_quick_stock_chart.html#abbde5e3fbc236b66dad067b652c58837">QuickStockChart</a>(QWidget *parent = 0,QUrl QuickStockChartUrl=QUrl(<span class="stringliteral">&quot;http://www.finviz.com/chart.ashx?t=SPY&amp;ty=c&amp;ta=1&amp;p=d&amp;s=l&quot;</span>));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="class_quick_stock_chart.html">QuickStockChart</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_quick_stock_chart.html#aff762155d7d6c38f87c0fd0ff6733842">   37</a></span>&#160;    Ui::QuickStockChart *<a class="code" href="class_quick_stock_chart.html#aff762155d7d6c38f87c0fd0ff6733842">ui</a>;   </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // QUICKSTOCKCHART_H</span></div>
+<div class="ttc" id="class_quick_stock_chart_html_abbde5e3fbc236b66dad067b652c58837"><div class="ttname"><a href="class_quick_stock_chart.html#abbde5e3fbc236b66dad067b652c58837">QuickStockChart::QuickStockChart</a></div><div class="ttdeci">QuickStockChart(QWidget *parent=0, QUrl QuickStockChartUrl=QUrl(&quot;http://www.finviz.com/chart.ashx?t=SPY&amp;ty=c&amp;ta=1&amp;p=d&amp;s=l&quot;))</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> quickstockchart.cpp:16</div></div>
+<div class="ttc" id="class_quick_stock_chart_html_a764cae6c7bcd52ee0d7fe42dd4b33929"><div class="ttname"><a href="class_quick_stock_chart.html#a764cae6c7bcd52ee0d7fe42dd4b33929">QuickStockChart::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *event)</div><div class="ttdoc">Functions triggered when dialog box is closed. </div><div class="ttdef"><b>Definition:</b> quickstockchart.cpp:59</div></div>
+<div class="ttc" id="class_quick_stock_chart_html"><div class="ttname"><a href="class_quick_stock_chart.html">QuickStockChart</a></div><div class="ttdoc">The QuickStockChart class handles the display of the stock charts. </div><div class="ttdef"><b>Definition:</b> quickstockchart.h:24</div></div>
+<div class="ttc" id="class_quick_stock_chart_html_af99b1a624e729e2328350f38968aa1e1"><div class="ttname"><a href="class_quick_stock_chart.html#af99b1a624e729e2328350f38968aa1e1">QuickStockChart::savePosition</a></div><div class="ttdeci">void savePosition()</div><div class="ttdoc">Saves the position of the dialog box. </div><div class="ttdef"><b>Definition:</b> quickstockchart.cpp:34</div></div>
+<div class="ttc" id="class_quick_stock_chart_html_ac9e5329aad2b5bce87fa46d05da331ef"><div class="ttname"><a href="class_quick_stock_chart.html#ac9e5329aad2b5bce87fa46d05da331ef">QuickStockChart::loadPosition</a></div><div class="ttdeci">void loadPosition()</div><div class="ttdoc">Loads the position of the dialog box. </div><div class="ttdef"><b>Definition:</b> quickstockchart.cpp:46</div></div>
+<div class="ttc" id="class_quick_stock_chart_html_aff762155d7d6c38f87c0fd0ff6733842"><div class="ttname"><a href="class_quick_stock_chart.html#aff762155d7d6c38f87c0fd0ff6733842">QuickStockChart::ui</a></div><div class="ttdeci">Ui::QuickStockChart * ui</div><div class="ttdoc">Creating of the UI of the Market Map. </div><div class="ttdef"><b>Definition:</b> quickstockchart.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 18 2014 16:58:43 for TKRTAP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 20 2014 10:09:36 for TKRTAP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
