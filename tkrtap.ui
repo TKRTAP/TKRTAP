@@ -287,7 +287,7 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
            <enum>QTabWidget::Triangular</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_Stocks">
            <attribute name="title">
@@ -459,17 +459,17 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
                    </property>
                    <item>
                     <property name="text">
+                     <string>Yahoo</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Quandl</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
                      <string>Yahoo</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Off</string>
                     </property>
                    </item>
                   </widget>
