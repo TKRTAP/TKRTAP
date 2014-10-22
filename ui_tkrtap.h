@@ -907,7 +907,7 @@ public:
         retranslateUi(TKRTAP);
         QObject::connect(actionExit, SIGNAL(triggered()), TKRTAP, SLOT(close()));
 
-        Tabs->setCurrentIndex(1);
+        Tabs->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(TKRTAP);
@@ -936,9 +936,9 @@ public:
         DataFeedgroupBox->setTitle(QApplication::translate("TKRTAP", "Data Feed", 0));
         DataFeedcomboBox->clear();
         DataFeedcomboBox->insertItems(0, QStringList()
+         << QApplication::translate("TKRTAP", "Yahoo", 0)
          << QApplication::translate("TKRTAP", "Quandl", 0)
          << QApplication::translate("TKRTAP", "Yahoo", 0)
-         << QApplication::translate("TKRTAP", "Off", 0)
         );
         groupBox->setTitle(QApplication::translate("TKRTAP", "Refresh Rate", 0));
         comboBoxRefresh->clear();

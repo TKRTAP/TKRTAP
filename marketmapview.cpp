@@ -22,8 +22,8 @@ MarketMapView::MarketMapView(QWidget *parent,QUrl MapUrl) :
     setWindowTitle("Market Map");
     ui->MarketMapWebView->load(MapUrl);
     loadPosition();
-    this->setFixedWidth(482);
-    this->setMaximumHeight(380);
+    this->setMaximumWidth(482);
+    this->setMaximumHeight(372);
 }
 
 MarketMapView::~MarketMapView()

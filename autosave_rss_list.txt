@@ -1,0 +1,4 @@
+http://markets.financialcontent.com/stocks/action/rssfeed?Symbol=AAPL
+http://markets.financialcontent.com/stocks/action/rssfeed?Symbol=BBBY
+http://markets.financialcontent.com/stocks/action/rssfeed?Symbol=BKE
+http://markets.financialcontent.com/stocks/action/rssfeed?Symbol=CSCO

@@ -28,7 +28,7 @@ public:
     {
         if (MarketMapView->objectName().isEmpty())
             MarketMapView->setObjectName(QStringLiteral("MarketMapView"));
-        MarketMapView->resize(427, 348);
+        MarketMapView->resize(427, 340);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -39,7 +39,7 @@ public:
         MarketMapView->setWindowIcon(icon);
         MarketMapWebView = new QWebView(MarketMapView);
         MarketMapWebView->setObjectName(QStringLiteral("MarketMapWebView"));
-        MarketMapWebView->setGeometry(QRect(0, -100, 501, 481));
+        MarketMapWebView->setGeometry(QRect(0, -108, 501, 481));
         MarketMapWebView->setUrl(QUrl(QStringLiteral("about:blank")));
         MarketMapWebView->setZoomFactor(0.6);
 
