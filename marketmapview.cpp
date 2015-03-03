@@ -22,8 +22,10 @@ MarketMapView::MarketMapView(QWidget *parent,QUrl MapUrl) :
     setWindowTitle("Market Map");
     ui->MarketMapWebView->load(MapUrl);
     loadPosition();
-    this->setMaximumWidth(482);
-    this->setMaximumHeight(372);
+    this->setMaximumWidth(615);
+    this->setMaximumHeight(335);
+    this->setMinimumWidth(615);
+    this->setMinimumHeight(335);
 }
 
 MarketMapView::~MarketMapView()
@@ -48,7 +50,7 @@ void MarketMapView::loadPosition()
     //Load;
     QSettings settingsMarketMap ("QS Tech", "TKRTAP");
     settingsMarketMap.beginGroup("MarketMapWindow");
-    QRect MarketMapdefaultRect(8,30,480,380);
+    QRect MarketMapdefaultRect(8,30,615,335);
     QRect MarketMaprect = settingsMarketMap.value("positionMarketMap",MarketMapdefaultRect).toRect();
     setGeometry(MarketMaprect);
     settingsMarketMap.endGroup();
